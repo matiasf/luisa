@@ -270,45 +270,6 @@ def root():
     body += "</body>\n</html>"
     return body    
 #-----------------------------------------------------------------------------
-@bottle.route('/hoja')
-def hoja():
-    #
-    # sorteo de hoja
-    #
-    id_hoja = sortear_hoja()
-    #
-    # sorteo de bloques a mostrar dentro de la hoja
-    #
-    id_bloques = sortear_bloques(id_hoja)
-
-    # obtenemos las imagenes en base64
-    # 
-    bloques, contexto = gen_imagenes(id_hoja, id_bloques)
-    hash_hoja = contexto["hash"]
-    b64ctx  = contexto["b64img"]
-    width = contexto["width"]
-    height = contexto["height"]
-    salida = "{\"hashhoja\": \""+ hash_hoja+"\", \"img\": \""+b64ctx+"\", \"width\":"+str(width)+",\"height\": "+str(height)+", \"bloques\" : ["
-    csv = f"{hash_hoja}\t{b64ctx}\t{width}\t{height}\n"    
-    #
-    # obtenemos hash de bloques
-    #
-    primero = 1
-    for b in bloques:
-    	if primero == 0:
-    		salida = salida + ","
-    	primero = 0
-    	hash_bloque = b["hash"]
-    	b64_bloque  = b["b64img"]
-    	width = b["width"]
-    	height = b["height"]
-    	salida = salida+"{\"hashbloque\": \""+ hash_bloque+"\", \"img\": \""+b64_bloque+"\", \"width\":"+str(width)+",\"height\": "+str(height)+"}"
-	
-	
-    bottle.response.content_type = 'application/json'
-    bottle.response.set_header('Pragma','no-cache')
-    salida = salida+"]}"
-    return salida
 
 @bottle.route('/main')
 def main():
