@@ -2,17 +2,12 @@ function AboutUs() {
 
     return (
         <div className="container">
-            <h2>Quienes somos</h2>
+            <h2>Quiénes Somos</h2>
             <p className="lead">La organización <u><a className="text-white" href="https://desaparecidos.org.uy/">Madres
                 y Familiares de Uruguayos
-                Detenidos-Desaparecidos </a></u>y otras organizaciones de derechos humanos, en su búsqueda por
-                verdad y justicia sobre los actos de terrorismo de Estado
-                cometidos en nuestro pasado reciente, continúa planteando su preocupación por el enorme retraso
-                en el tratamiento del caudal de información que se ha generado en los diferentes procesos de
-                digitalización de aquella documentación que es fuente primaria para las investigaciones en
-                materia de graves violaciones a los derechos humanos cometidos en el período dictatorial y
-                pre dictatorial.</p>
-            <p className="lead">Desde este problema y en el marco del llamado 2017 a Proyectos de Extensión que emitió
+                Detenidos-Desaparecidos </a></u>y otras organizaciones de derechos humanos. 
+	    </p>
+            <p className="lead">En el marco del llamado 2017 a Proyectos de Extensión que emitió
                 la <u><a className="text-white"
                          href="http://www.extension.udelar.edu.uy/">Comisión
                     Sectorial de Extensión y Actividades con el Medio (CSEAM) </a></u>de la <u><a className="text-white"
@@ -38,6 +33,11 @@ function AboutUs() {
                 construir herramientas que faciliten el procesamiento de la información contenida en los
                 documentos para su posterior divulgación, como contribución en la búsqueda de la verdad y la
                 justicia.</p>
+
+            <p className="lead"> El <u><a className="text-white"
+                                                                                      href="../mem/">Proyecto de
+                    Sistematización, Cruzamiento y Análisis de los Archivos Militares</a></u>
+            </p>
             <h2>Equipo de Trabajo</h2>
             <br/>
             <br/>
@@ -100,7 +100,7 @@ function AboutUs() {
             <br/>
 
             <div className="captcha-form-controls col-md-12 d-flex justify-content-center">
-                <a className="btn btn-dark btn-lg" href="https://forms.gle/XhaSyBFcWdVbtKtZA"
+                <a className="btn btn-light btn-lg" href="https://forms.gle/XhaSyBFcWdVbtKtZA"
                    target="_blank">Encuesta sobre el sistema</a>
             </div>
 

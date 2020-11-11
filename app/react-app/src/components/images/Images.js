@@ -5,7 +5,7 @@ function Images() {
     return (
         <>
             <div>
-                <h1 className="text-center">Imagenes</h1>
+                <h1 className="text-center">Imágenes</h1>
 
                 <br/>
                 <div className="row border border-dark rounded m-3 bg-secondary">
@@ -58,7 +58,7 @@ function Images() {
             <br/>
 
             <div className="captcha-form-controls col-md-12 d-flex justify-content-center">
-                <button className="btn btn-dark btn-lg" id="enviar">Enviar datos</button>
+                <button className="btn btn-dark btn-lg" id="enviar">Enviar Datos</button>
             </div>
 
             <hr className="m-4"/>

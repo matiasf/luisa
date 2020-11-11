@@ -1,3 +1,4 @@
+import IntroductionVis from './components/info/IntroductionVis';
 import WelcomeInfo from './components/info/WelcomeInfo';
 import Help from './components/info/Help';
 import Privacy from './components/info/Privacy';
@@ -18,7 +19,7 @@ function App() {
                     <div className="collapse navbar-collapse" id="navbarResponsive">
                         <ul className="navbar-nav ml-auto">
                             <li className="nav-item">
-                                <a className="nav-link js-scroll-trigger" href="#images">Imagenes</a>
+                                <a className="nav-link js-scroll-trigger" href="#images">Imágenes</a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link js-scroll-trigger" href="#help">Instrucciones</a>
@@ -27,7 +28,7 @@ function App() {
                                 <a className="nav-link js-scroll-trigger" href="#privacy">Compromiso de Privacidad</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link js-scroll-trigger" href="#about-us">Quienes somos</a>
+                                <a className="nav-link js-scroll-trigger" href="#about-us">Quiénes Somos</a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link js-scroll-trigger" href="https://cruzar.uy/"
@@ -38,9 +39,13 @@ function App() {
                 </div>
             </nav>
 
-            <header className="text-white parallax" id="page-top">
+	    <section className="bg-warning text-black parallax" id="page-top">
+                <IntroductionVis/>
+            </section>
+
+            <section className="text-white parallax">
                 <WelcomeInfo/>
-            </header>
+            </section>
 
             <section id="images">
                 <Images/>
