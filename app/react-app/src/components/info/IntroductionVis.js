@@ -4,7 +4,10 @@ function IntroductionVis() {
 
         <div className="container-fluid bg-warning text-right">
 
-	    <img className="rounded float-left" alt="luisa dibujo" src={require('./luisa_dibujo.jpg')}/>
+	    <img className="rounded float-left" alt="luisa dibujo" src="luisa-theme/luisa_dibujo.jpg"/>
+
+
+
 
             <h1 class="alternate-font display-1 font-weight-bolder"><strong>Luisa</strong></h1>
             <h3 class="alternate-font">Leyendo Unidos para</h3>
