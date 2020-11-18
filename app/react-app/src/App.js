@@ -42,14 +42,16 @@ function App() {
 	    <section className="bg-warning text-black parallax" id="page-top">
                 <IntroductionVis/>
             </section>
+			
+			<section id="images">
+                <Images/>
+            </section>
 
             <section className="text-white parallax">
                 <WelcomeInfo/>
             </section>
 
-            <section id="images">
-                <Images/>
-            </section>
+
 
             <section id="help" className="text-white parallax">
                 <Help/>

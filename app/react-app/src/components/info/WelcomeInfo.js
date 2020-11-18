@@ -9,31 +9,39 @@ function WelcomeInfo() {
                 Cuesta</a></u>, es un esfuerzo colectivo para transcribir textos del período dictatorial y
                 pre dictatorial uruguayo que por diversas razones es difícil
                 transcribir de manera automática. El proyecto busca verdad y justicia sobre los actos de terrorismo de Estado
-                cometidos en nuestro pasado reciente, almacenando informacióna través de la digitalización de la documentación que después 
-		funciona como fuente primaria para las investigaciones en
+                cometidos en nuestro pasado reciente, almacenando información a través de la digitalización de documentación e investigaciones en
                 materia de graves violaciones a los derechos humanos cometidos.
             </p>
 
  <div class="row">
     <div class="col-3">
-<h3 className="text-center">Recuperación Archivos </h3>
-<p className="lead"> Se recuperaron varios archivos donde se almacena información de la dictadura uruguaya que incluye
+
+	<svg viewBox="0 0 100 100" preserveAspectRatio="xMaxYMax meet" class="bi" width="200" height="200" fill="currentColor">
+	<circle cx="50%" cy="50%" r="50%" fill="grey" />
+  
+  <use href="bootstrap-icons/bootstrap-icons.svg#receipt"/>
+
+</svg>
+
+
+<h4 className="text-center">Recuperación de Archivos </h4>
+<p className="lead"> Se recuperaron archivos de varias fuentes donde se almacena información sobre la dictadura uruguaya incluyendo
                 procedimientos represivos, fichas policiales, informes, etc.</p>
     </div>
     <div class="col-3 border border-white">
-<h3 className="text-center">Transcripción Manual de Imágenes</h3>
+<h4 className="text-center">Transcripción de Imágenes</h4>
       <p className="lead">Trabajamos con una foto de un documento, de la cual le ofrecemos una porción que contiene texto,
                 símbolos o números. Pedimos que nos ayude transcribiendo lo que vea.
             </p>
     </div>
     <div class="col-3">
-<h3 className="text-center">Aplicación de Técnicas de Cruzamiento</h3>
+<h4 className="text-center">Aplicación de Técnicas de Cruzamiento</h4>
                         <p className="lead">Se utilizan
                 técnicas de cruzamiento de información para ayudar a vencer la impunidad.
             </p>
     </div>
     <div class="col-3">
-      <h3 className="text-center">Análisis</h3>
+      <h4 className="text-center">Análisis</h4>
 <p className="lead">Los documentos se categorizan y analisan para mejor entender el funcionamiento de la dictadura.</p>
     </div>
   </div>
@@ -43,9 +51,14 @@ function WelcomeInfo() {
             </p>
             <p className="lead">¡Muchas gracias por su tiempo y su colaboración!
             </p>
-            
-	    <p className="lead"><a href="mailto:cruzar@fic.edu.uy?subject=Luisa: ">cruzar@fic.edu.uy</a> | <a href="https://www.instagram.com/proyecto.luisa/?hl=es-la">Instagram</a>
-	    </p>
+          <div>
+	<svg class="bi icon-color" width="200" height="200">
+
+  
+		<a href="mailto:cruzar@fic.edu.uy?subject=Luisa: "><use href="bootstrap-icons/bootstrap-icons.svg#envelope"/></a>
+
+	</svg>
+	   </div>
             <a className="btn btn-light" href="#images">¡A las imágenes!</a>
         </div>
     );

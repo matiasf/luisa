@@ -2,12 +2,13 @@ function IntroductionVis() {
 
     return (
 
-        <div className="container-fluid bg-warning text-right">
+        <div className="container-fluid banner-background text-right">
+<div class="row">
+<div class="col-md-4">
+	    <img className="rounded float-left" alt="luisa dibujo" src="luisa-theme/luisa_dibujo_chico.png"/>
+</div>
 
-	    <img className="rounded float-left" alt="luisa dibujo" src="luisa-theme/luisa_dibujo.jpg"/>
-
-
-
+<div class="col-md-8">
 
             <h1 class="alternate-font display-1 font-weight-bolder"><strong>Luisa</strong></h1>
             <h3 class="alternate-font">Leyendo Unidos para</h3>
@@ -16,6 +17,8 @@ function IntroductionVis() {
 
 
             <a className="btn btn-light" href="#images">¡A las imágenes!</a>
+			</div>
+			</div>
         </div>
     );
 
