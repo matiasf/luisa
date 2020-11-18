@@ -192,6 +192,18 @@ def gen_imagenes(id_hoja, id_bloques):
 #----------------------------------------------------------------------------------------------------
 #
 
+
+# HABILITACION DE CORS PARA DESARROLLO
+@bottle.hook('after_request')
+def enable_cors():
+    """
+    You need to add some headers to each request.
+    Don't use the wildcard '*' for Access-Control-Allow-Origin in production.
+    """
+    bottle.response.set_header('Access-Control-Allow-Origin','*')
+    bottle.response.set_header('Access-Control-Allow-Methods','PUT, GET, POST, DELETE, OPTIONS')
+    bottle.response.set_header('Access-Control-Allow-Headers','Origin, Accept, Content-Type, X-Requested-With, X-CSRF-Token')
+
 @bottle.route('/')
 def portada():
     '''
