@@ -38,6 +38,7 @@ from PIL import Image,ImageOps,ImageChops,ImageDraw
 import matplotlib.pyplot as plt
 from scipy import ndimage, misc
 from skimage import transform
+import posixpath
 
 def imrot(img,angle):
     w,h = img.size
@@ -213,15 +214,15 @@ if __name__ == '__main__':
     # ARGUMENTOS DE LINEA DE COMANDOS
     #
     ap = argparse.ArgumentParser()
-    ap.add_argument("-d", "--datadir", type=str, default="../datos",
+    ap.add_argument("-d", "--datadir", type=str, default=posixpath.normpath("../datos"),
 		    help="path prefix  where to find files")
-    ap.add_argument("-o","--outdir", type=str, default="../results",
+    ap.add_argument("-o","--outdir", type=str, default=posixpath.normpath("../results"),
 		    help="where to store results")
-    ap.add_argument("-l","--list", type=str, default="../datos/r0566.list",
+    ap.add_argument("-l","--list", type=str, default=posixpath.normpath("../datos/r0566.list"),
 		    help="text file where input files are specified")
-    ap.add_argument("-s","--seals", type=str, default="../datos/sellos.list",
+    ap.add_argument("-s","--seals", type=str, default=posixpath.normpath("../datos/sellos.list"),
 		    help="text file with the list of input seal image files")
-    ap.add_argument("-t","--truth", type=str, default="../datos/sellos_gt.csv",
+    ap.add_argument("-t","--truth", type=str, default=posixpath.normpath("../datos/sellos_gt.csv"),
 		    help="ground truth file.")
     args = vars(ap.parse_args())
     #
