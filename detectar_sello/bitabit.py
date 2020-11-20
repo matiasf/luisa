@@ -29,7 +29,7 @@ import time
 import argparse
 import math
 import scipy.signal as dsp
-
+from functools import partial
 #
 # bibliotecas adicionales necesarias
 #
@@ -38,6 +38,8 @@ from PIL import Image,ImageOps,ImageChops,ImageDraw
 import matplotlib.pyplot as plt
 from scipy import ndimage, misc
 from skimage import transform
+import cv2
+import multiprocessing
 
 def imrot(img,angle):
     w,h = img.size
@@ -70,7 +72,162 @@ def listaz(a,proporcion):
 		salida.append(aa)
 	return salida
 	
+def sacarBarras(img):
+	s1 = np.sum(img)
+	contours,hierarchy = cv2.findContours(img, cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
+	for cnt in contours:
+		area = cv2.contourArea(cnt)
+		if area >50000:
+			img2 = img.copy()
+			img2 = cv2.fillPoly(img2, pts =[cnt], color=(0))
+			s2 = np.sum(img2)
+			promedio = ((s1-s2)/area)
+			if promedio>0.9:
+	#			print("sustitui")
+				img = img2
+				si = s2
+	return img
+def bitabit(angulo,sello_,limgz_):
+	ESCALAS = 256
+	tolerancia = 0.4
+	
+#se va a agrandar un poco la imagen, y rellena con 0 en los bordes, así que los bordes no generan error
+	s = ndimage.rotate(sello_,angulo, reshape=True)
+	
+	#armo la lista con el sello en las distintas escalas
+	lsz = listaz(s,ESCALAS)
+	lsz = lsz[::-1]
+	
+	sz = lsz[0]
+	imgz = limgz_[0]
+	(largos,anchos) = np.shape(sz)
+	(largo,ancho) = np.shape(imgz)
+	sumasello = np.sum(sz)
+	validos = []
+	if sumasello>0:
+		for i in range(largo-largos):
+			for j in range(ancho-anchos):
+				corte = imgz[i:largos+i,j:anchos+j]
+				suma = np.sum(np.logical_and(corte == 1, sz == 1))
+				#sumacorte = np.sum(corte)
+				#if sumacorte!=0 and ((suma*suma)/(sumasello*sumacorte))>=tolerancia:
+				if (suma/sumasello)>=tolerancia:
+					validos.append((i,j,suma/sumasello))
+	
+	proporcion = ESCALAS
+	ii = 1
+	while proporcion>1 and len(validos)>0:
+		proporcion = proporcion/2
+		#print(f'sello {isello} angulo {angulo} : proporcion {proporcion} validar: {len(validos)}')
+		sz = lsz[ii]
+		imgz = limgz_[ii]
+		ii = ii+1
+		sumasello = np.sum(sz)
+		#plt.imshow(sz, interpolation='nearest')
+		#plt.show()
+		#plt.imshow(imgz, interpolation='nearest')
+		#plt.show()
+		(largos,anchos) = np.shape(sz)
+		(largo,ancho) = np.shape(imgz)
+		vds = []
+		for (i,j,margen) in validos:
+			i = i*2
+			j = j*2
+			
+			if (largos+i)<=largo and (anchos+j)<=ancho:
+				corte = imgz[i:largos+i,j:anchos+j]
+				suma = np.sum(np.logical_and(corte == 1, sz == 1))
+
+				if (suma/sumasello)>=tolerancia:
+					vds.append((i,j,suma/sumasello))
+
+				if (largos+i+1)<=largo:
+					corte = imgz[(i+1):(largos+i+1),j:anchos+j]
+					suma = np.sum(np.logical_and(corte == 1, sz == 1))
+					if (suma/sumasello)>=tolerancia:
+						vds.append((i+1,j,suma/sumasello))
+				
+				if (anchos+j+1)<=ancho:
+					corte = imgz[i:largos+i,(j+1):anchos+j+1]
+					suma = np.sum(np.logical_and(corte == 1, sz == 1))
+					if (suma/sumasello)>=tolerancia:
+						vds.append((i,j+1,suma/sumasello))
+				
+				if (anchos+j+1)<=ancho and (largos+i+1)<=largo:
+					corte = imgz[i+1:largos+i+1,j+1:anchos+j+1]
+					suma = np.sum(np.logical_and(corte == 1, sz == 1))
+					if (suma/sumasello)>=tolerancia:
+						vds.append((i+1,j+1,suma/sumasello))
+
+		validos = vds
+	maximo = 0
+	imaximo = 0
+	jmaximo = 0
+	#print(f' rotacion {angulo}')
+	#print(validos)
+	for (i,j,margen) in validos:
+		if margen>maximo:
+			imaximo = i
+			jmaximo = j
+			maximo = margen
+	#print("sale ",imaximo,jmaximo,maximo)
+	return (imaximo,jmaximo,maximo)
+		
+def detector_bitabit_pool(img,seals):
+	ESCALAS = 256
+	img = sacarBarras(img)
+	det = np.zeros(len(seals),dtype=np.float)
+	isello = 0
+	#armo la lista con la imagen en las distintas escalas
+	limgz = listaz(img,ESCALAS)
+	limgz = limgz[::-1]
+	for sello in seals:
+		#plt.imshow(img, interpolation='nearest')
+		#plt.show()
+		#plt.imshow(sello, interpolation='nearest')
+		#plt.show()
+		imaximo = 0
+		jmaximo = 0
+		resultados = []
+		
+		p = multiprocessing.Pool()
+		resultados = p.map(partial(bitabit,sello_=sello,limgz_=limgz),range(-10,10))
+		p.close()
+		p.join()
+		#print(resultados)
+		maximo = 0
+		imaximo = 0
+		jmaximo = 0
+		for (i,j,margen) in resultados:
+			if margen>maximo:
+				imaximo = i
+				jmaximo = j
+				maximo = margen
+
+		#esta parte es solo para mostrar
+		mostrar = 0
+		if mostrar==1:
+			#if maximo>tolerancia :		
+			#print(f'maximo {maximo}')
+			(largos,anchos) = np.shape(sello)
+			copia = np.copy(img)
+			for x in range(largos):
+				for y in range(anchos):
+					if copia[x+imaximo][y+jmaximo]==1:
+						copia[x+imaximo][y+jmaximo] = 0
+					else:
+						copia[x+imaximo][y+jmaximo] = 1
+			#print(f'maximo: {maximo}')
+			#plt.imshow(sello, interpolation='nearest')
+			#plt.show()
+			#plt.imshow(copia, interpolation='nearest')
+			#plt.show()
+		det[isello] = maximo
+		isello = isello+1
+	return det
+
 def detector_bitabit(img,seals):
+	img = sacarBarras(img)
 	ESCALAS = 256
 	det = np.zeros(len(seals),dtype=np.float)
 	tolerancia = 0.4
@@ -247,7 +404,7 @@ if __name__ == '__main__':
     #
     # armamos lista de detectores a evaluar
     #
-    detectores = (detector_bitabit,detector_nulo)
+    detectores = (detector_bitabit_pool,detector_nulo)
 
     #
     # abrimos lista de archivos
