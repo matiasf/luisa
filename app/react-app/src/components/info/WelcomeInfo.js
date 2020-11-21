@@ -14,10 +14,10 @@ function WelcomeInfo() {
                 documentación e investigaciones en
                 materia de graves violaciones a los derechos humanos cometidos.
             </p>
-            <div class="row">
-                <div class="col-3">
+            <div className="row">
+                <div className="col-3">
 
-                    <svg viewBox="0 0 100 100" preserveAspectRatio="xMaxYMax meet" class="bi" width="200" height="200"
+                    <svg viewBox="0 0 100 100" preserveAspectRatio="xMaxYMax meet" className="bi" width="200" height="200"
                          fill="currentColor">
                         <circle cx="50%" cy="50%" r="50%" fill="grey"/>
 
@@ -31,20 +31,20 @@ function WelcomeInfo() {
                         la dictadura uruguaya incluyendo
                         procedimientos represivos, fichas policiales, informes, etc.</p>
                 </div>
-                <div class="col-3 border border-white">
+                <div className="col-3 border border-white">
                     <h4 className="text-center">Transcripción de Imágenes</h4>
                     <p className="lead">Trabajamos con una foto de un documento, de la cual le ofrecemos una porción que
                         contiene texto,
                         símbolos o números. Pedimos que nos ayude transcribiendo lo que vea.
                     </p>
                 </div>
-                <div class="col-3">
+                <div className="col-3">
                     <h4 className="text-center">Aplicación de Técnicas de Cruzamiento</h4>
                     <p className="lead">Se utilizan
                         técnicas de cruzamiento de información para ayudar a vencer la impunidad.
                     </p>
                 </div>
-                <div class="col-3">
+                <div className="col-3">
                     <h4 className="text-center">Análisis</h4>
                     <p className="lead">Los documentos se categorizan y analisan para mejor entender el funcionamiento
                         de la dictadura.</p>

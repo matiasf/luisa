@@ -331,6 +331,7 @@ def procesar():
     '''
     Solo redirige a main
     '''
+    tic0 = time.time()
     for xHeader in bottle.request.headers:
         print(xHeader,":",bottle.request.headers[xHeader])
     prefixPath=""
