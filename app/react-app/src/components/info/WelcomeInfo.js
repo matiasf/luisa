@@ -12,7 +12,6 @@ function WelcomeInfo() {
                 cometidos en nuestro pasado reciente, almacenando información a través de la digitalización de documentación e investigaciones en
                 materia de graves violaciones a los derechos humanos cometidos.
             </p>
-<<<<<<< HEAD
  <div class="row">
     <div class="col-3">
 
