@@ -5,12 +5,12 @@ function IntroductionVis() {
     
 
  <div className="container-fluid banner-background text-right">
-<div class="row">
-<div class="col-md-4">
+<div className="row">
+<div className="col-md-4">
 	    <img className="rounded float-left" alt="luisa dibujo" src="luisa-theme/luisa_dibujo_chico.png"/>
 </div>
 
-<div class="col-md-8">
+<div className="col-md-8">
 
 
             <h1 className="alternate-font display-1 font-weight-bolder"><strong>Luisa</strong></h1>

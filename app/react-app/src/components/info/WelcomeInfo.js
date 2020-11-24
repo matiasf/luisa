@@ -11,8 +11,8 @@ function WelcomeInfo() {
                 transcribir de manera automática. El proyecto busca verdad y justicia sobre los actos de terrorismo de
                 Estado.
             </p>
-            <div class="row">
-                <div class="col-3">
+            <div className="row">
+                <div className="col-3">
 
                     <svg viewBox="125 0 200 200" preserveAspectRatio="xMaxYMax meet" class="bi" width="100%" height="20%"
                          fill="currentColor">
@@ -22,8 +22,6 @@ function WelcomeInfo() {
 							<use width="100%" height="65%" href="bootstrap-icons/bootstrap-icons.svg#receipt"/>
 						</svg>
 					</svg>
-                    
-
 
                     <h4 className="text-center">Recuperación de Archivos </h4>
                     <p className="lead"> Se recuperaron archivos de varias fuentes donde se almacena información sobre
@@ -53,6 +51,7 @@ function WelcomeInfo() {
 							<use width="100%" height="65%" href="bootstrap-icons/bootstrap-icons.svg#braces"/>
 						</svg>
 					</svg>
+
                     <h4 className="text-center">Aplicación de Técnicas de Cruzamiento</h4>
                     <p className="lead">Se utilizan
                         técnicas de cruzamiento de información para procesar de manera automatica y eficiente los contenidos de los documentos digitalizados.
@@ -67,6 +66,7 @@ function WelcomeInfo() {
 							<use width="100%" height="65%" href="bootstrap-icons/bootstrap-icons.svg#eyeglasses"/>
 						</svg>
 					</svg>
+
                     <h4 className="text-center">Análisis</h4>
                     <p className="lead">Los documentos se categorizan y analisan para mejor entender el funcionamiento
                         de la dictadura.</p>
