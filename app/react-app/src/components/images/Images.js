@@ -89,51 +89,53 @@ class Images extends React.Component {
     }
 
     render() {
-        return <div ref={this.sendRef}>
-            <div>
-                <h1 className="text-center">Imágenes</h1>
+        return <div ref={this.sendRef} className="container">
+            <div className="row">
+                <h1 className="text-center col-lg-12">Imágenes</h1>
 
-                <br/>
-
-                <div className="row border border-dark rounded m-3 bg-secondary">
-                    {this.state.blocks.filter(block => !block.context).map(block =>
-                        // <div className="col-md-3 d-flex align-items-start flex-column my-2" key={block.idx}>
-                        <div className="col-md-3 d-flex align-items-start flex-column my-2" key={block.idx}>
-                            <img className="img-fluid" alt="imagen_documento"
-                                 src={'data:image/gif;base64,' + block.b64img}/>
-                            <hr/>
-                            {this.state.loading && (
-                                <div className="spinner-grow" role="status">
-                                    <span className="sr-only">Loading...</span>
-                                </div>)}
-                            {!this.state.loading && (
-                                <textarea className="form-control" rows="1" id={block.idx}
-                                          style={{width: block.width + 'px', overflowX: 'visible'}}
-                                          onChange={this.handleTextInputValue}/>
-                            )}
-                        </div>
-                    )}
-                </div>
-            </div>
-
-            <br/>
-
-            {this.state.loading && (
-                <div className="captcha-form-controls col-md-12 d-flex justify-content-center">
-                    <div className="spinner-border" style={{width: '3rem', height: '3rem', role: 'status'}}>
+                <div className="col-lg-12">
+                    <div className="row border border-dark rounded m-3 bg-secondary">
+                        {this.state.blocks.filter(block => !block.context).map(block =>
+                            // <div className="col-md-3 d-flex align-items-start flex-column my-2" key={block.idx}>
+                            <div className="col-md-3 d-flex align-items-start flex-column my-2" key={block.idx}>
+                                <img className="img-fluid" alt="imagen_documento"
+                                     src={'data:image/gif;base64,' + block.b64img}/>
+                                <hr/>
+                                {this.state.loading && (
+                                    <div className="spinner-grow" role="status">
+                                        <span className="sr-only">Loading...</span>
+                                    </div>)}
+                                {!this.state.loading && (
+                                    <textarea className="form-control" rows="1" id={block.idx}
+                                              style={{width: block.width + 'px', overflowX: 'visible'}}
+                                              onChange={this.handleTextInputValue}/>
+                                )}
+                            </div>
+                        )}
                     </div>
-                    <span className="sr-only">Enviando datos...</span>
-                </div>)}
-            {!this.state.loading && (
-                <div className="captcha-form-controls col-md-12 d-flex justify-content-center">
-                    <button className="btn btn-dark btn-lg" id="enviar" onClick={this.handleSendDataToLuisa}>
-                        Enviar datos
-                    </button>
-                    <button className="btn btn-dark btn-lg" id="enviar" onClick={this.handleSendGiradaToLuisa}>
-                        Imagen girada
-                    </button>
-                </div>)}
+                </div>
 
+                {this.state.loading && (
+                    <div className="captcha-form-controls col-md-12 d-flex justify-content-center">
+                        <div className="spinner-border" style={{width: '3rem', height: '3rem', role: 'status'}}>
+                        </div>
+                        <span className="sr-only">Enviando datos...</span>
+                    </div>)}
+                {!this.state.loading && (
+                    <div className="captcha-form-controls col-md-12 d-flex justify-content-center btn-toolbar">
+                        <div className="btn-group mr-2">
+                            <button className="btn btn-dark btn-lg" id="enviar" onClick={this.handleSendDataToLuisa}>
+                                Enviar datos
+                            </button>
+                        </div>
+
+                        <div className="btn-group mr-2">
+                            <button className="btn btn-dark btn-lg" id="enviar" onClick={this.handleSendGiradaToLuisa}>
+                                Imagen girada
+                            </button>
+                        </div>
+                    </div>)}
+            </div>
 
             <hr className="m-4"/>
 
