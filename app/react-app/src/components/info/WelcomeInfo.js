@@ -12,9 +12,8 @@ function WelcomeInfo() {
                 Estado.
             </p>
             <div className="row">
-                <div className="col-3">
-
-                    <svg viewBox="125 0 200 200" preserveAspectRatio="xMaxYMax meet" className="bi" width="100%"
+                <div className="col-lg-3">
+                    <svg viewBox="0 0 200 200" width="100%"
                          height="20%"
                          fill="currentColor">
                         <circle cx="50%" cy="50%" r="50%" fill="grey"/>
@@ -30,8 +29,8 @@ function WelcomeInfo() {
                         la dictadura uruguaya incluyendo
                         procedimientos represivos, fichas policiales, informes, etc.</p>
                 </div>
-                <div className="col-3 border border-white">
-                    <svg viewBox="125 0 200 200" preserveAspectRatio="xMaxYMax meet" className="bi" width="100%"
+                <div className="col-lg-3">
+                    <svg viewBox="0 0 200 200" width="100%"
                          height="20%"
                          fill="currentColor">
                         <circle cx="50%" cy="50%" r="50%" fill="grey"/>
@@ -41,14 +40,15 @@ function WelcomeInfo() {
                             <use width="100%" height="65%" href="bootstrap-icons/bootstrap-icons.svg#pencil"/>
                         </svg>
                     </svg>
+
                     <h4 className="text-center">Transcripción de Imágenes</h4>
                     <p className="lead">Pedimos que nos ayude transcribiendo fotos de documentos, de la cual le
                         ofrecemos una porción que
                         contiene texto, símbolos o números.
                     </p>
                 </div>
-                <div className="col-3">
-                    <svg viewBox="125 0 200 200" preserveAspectRatio="xMaxYMax meet" className="bi" width="100%"
+                <div className="col-lg-3">
+                    <svg viewBox="0 0 200 200" width="100%"
                          height="20%"
                          fill="currentColor">
                         <circle cx="50%" cy="50%" r="50%" fill="grey"/>
@@ -65,8 +65,8 @@ function WelcomeInfo() {
                         contenidos de los documentos digitalizados.
                     </p>
                 </div>
-                <div className="col-3">
-                    <svg viewBox="125 0 200 200" preserveAspectRatio="xMaxYMax meet" className="bi" width="100%"
+                <div className="col-lg-3">
+                    <svg viewBox="0 0 200 200" width="100%"
                          height="20%"
                          fill="currentColor">
                         <circle cx="50%" cy="50%" r="50%" fill="grey"/>
@@ -82,17 +82,19 @@ function WelcomeInfo() {
                         de la dictadura.</p>
                 </div>
             </div>
+
             <p className="lead">Entre todos, cada quien a su ritmo, podemos ayudar a conocer la verdad.
             </p>
             <p className="lead">¡Muchas gracias por su tiempo y su colaboración!
             </p>
 
-            <p className="lead"><a className="text-white" href="mailto:cruzar@fic.edu.uy?subject=Luisa: ">
-                <svg viewBox="0 0 50 50" preserveAspectRatio="xMaxYMax meet" className="bi" width="4%" height="4%"
-                     fill="currentColor">
-                    <use width="100%" height="100%" href="bootstrap-icons/bootstrap-icons.svg#envelope"/>
-                </svg>
-            </a> |
+            <p className="lead">
+                <a className="text-white" href="mailto:cruzar@fic.edu.uy?subject=Luisa: ">
+                    <svg viewBox="0 0 50 50" preserveAspectRatio="xMaxYMax meet" className="bi" width="4%" height="4%"
+                         fill="currentColor">
+                        <use width="100%" height="100%" href="bootstrap-icons/bootstrap-icons.svg#envelope"/>
+                    </svg>
+                </a>{' | '}
                 <a className="text-white"
                    href="https://www.instagram.com/proyecto.luisa/?hl=es-la">
                     <svg viewBox="0 0 50 50" preserveAspectRatio="xMaxYMax meet" className="bi" width="4%" height="4%"
