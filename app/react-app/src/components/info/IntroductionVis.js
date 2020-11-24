@@ -16,7 +16,7 @@ function IntroductionVis() {
             <h1 className="alternate-font display-1 font-weight-bolder"><strong>Luisa</strong></h1>
             <h3 className="alternate-font">Leyendo Unidos para</h3>
             <h3 className="alternate-font">Interpretar loS Archivos</h3>
-            <h5>¡Contribuya a la lucha contra la impunidad en el Uruguay!</h5>
+
 
             <a className="btn btn-light" href="#images">¡A las imágenes!</a>
 			</div>

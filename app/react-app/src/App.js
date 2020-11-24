@@ -22,10 +22,13 @@ function App() {
                                 <a className="nav-link js-scroll-trigger" href="#images">Imágenes</a>
                             </li>
                             <li className="nav-item">
+                                <a className="nav-link js-scroll-trigger" href="#welcomeinfo">Proyecto</a>
+                            </li>
+							<li className="nav-item">
                                 <a className="nav-link js-scroll-trigger" href="#help">Instrucciones</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link js-scroll-trigger" href="#privacy">Compromiso de Privacidad</a>
+                                <a className="nav-link js-scroll-trigger" href="#privacy">Privacidad</a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link js-scroll-trigger" href="#about-us">Quiénes Somos</a>
@@ -47,7 +50,7 @@ function App() {
                 <Images/>
             </section>
 
-            <section className="text-white parallax">
+            <section id="welcomeinfo" className="text-white parallax">
                 <WelcomeInfo/>
             </section>
 
