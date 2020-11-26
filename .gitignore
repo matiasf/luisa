@@ -1,2 +1,24 @@
+# Temporal results folder proyect
 results
+
+# Idea IDEs folder
 .idea
+
+# Byte-compiled
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Node and js dependencies
+/node_modules
+/.pnp
+.pnp.js

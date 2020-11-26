@@ -19,8 +19,6 @@ from urllib.parse import quote
 from PIL import Image, ImageDraw
 import bottle
 from datetime import datetime
-from bottle import request
-import json
 # 
 # paquetes propios
 #
@@ -194,6 +192,18 @@ def gen_imagenes(id_hoja, id_bloques):
 #----------------------------------------------------------------------------------------------------
 #
 
+
+# HABILITACION DE CORS PARA DESARROLLO
+@bottle.hook('after_request')
+def enable_cors():
+    """
+    You need to add some headers to each request.
+    Don't use the wildcard '*' for Access-Control-Allow-Origin in production.
+    """
+    bottle.response.set_header('Access-Control-Allow-Origin','*')
+    bottle.response.set_header('Access-Control-Allow-Methods','PUT, GET, POST, DELETE, OPTIONS')
+    bottle.response.set_header('Access-Control-Allow-Headers','Origin, Accept, Content-Type, X-Requested-With, X-CSRF-Token')
+
 @bottle.route('/')
 def portada():
     '''
@@ -272,8 +282,16 @@ def root():
     body += "</body>\n</html>"
     return body    
 #-----------------------------------------------------------------------------
-@bottle.route('/hoja')
-def hoja():
+
+@bottle.route('/main')
+def main():
+    ''' 
+    Genera una consulta de LUISA para ser procesada por una APP
+    El formato de la consulta es un documento de texto plano tipo CSV
+    La primera fila tiene el hash de la IMAGEN (no del bloque) y el base64 de la imagen de contexto
+    En el resto de las filas, la primera columna es el hash identificador de un bloque 
+    y la segunda es la imagen del bloque codificada en base64
+    '''
     #
     # sorteo de hoja
     #
@@ -290,27 +308,19 @@ def hoja():
     b64ctx  = contexto["b64img"]
     width = contexto["width"]
     height = contexto["height"]
-    salida = "{\"hashhoja\": \""+ hash_hoja+"\", \"img\": \""+b64ctx+"\", \"width\":"+str(width)+",\"height\": "+str(height)+", \"bloques\" : ["
+    csv = f"{hash_hoja}\t{b64ctx}\t{width}\t{height}\n"    
     #
     # obtenemos hash de bloques
     #
-    primero = 1
     for b in bloques:
-    	if primero == 0:
-    		salida = salida + ","
-    	primero = 0
-    	hash_bloque = b["hash"]
-    	b64_bloque  = b["b64img"]
-    	width = b["width"]
-    	height = b["height"]
-    	salida = salida+"{\"hashbloque\": \""+ hash_bloque+"\", \"img\": \""+b64_bloque+"\", \"width\":"+str(width)+",\"height\": "+str(height)+"}"
-	
-	
-    bottle.response.content_type = 'application/json'
+        hash_bloque = b["hash"]
+        b64_bloque  = b["b64img"]
+        width = b["width"]
+        height = b["height"]
+        csv = csv + f"{hash_bloque}\t{b64_bloque}\t{width}\t{height}\n"
+    bottle.response.content_type = 'text/plain; charset=latin1'
     bottle.response.set_header('Pragma','no-cache')
-    salida = salida+"]}"
-    return salida
-
+    return csv
 
 #
 #----------------------------------------------------------------------------------------------------
@@ -318,17 +328,34 @@ def hoja():
 
 @bottle.route('/procesar',method="POST")
 def procesar():
-# espero algo con la forma {"hashhoja": "id","orientacion":"1", "bloques": [{"hashbloque": "id", "texto": "coso"},..]}
-	entrada = request.json
-#	print(entrada)
-	hashhoja = entrada['hashhoja']
-	orientacion = entrada['orientacion']
-	print(f'hoja: {hashhoja} orientacion: {orientacion}')
-	for bloque in entrada['bloques']:
-#		print(bloque)
-		hashbloque = bloque['hashbloque']
-		texto = bloque['texto']
-		print(f'bloque: {hashbloque} texto: {texto}')
+    '''
+    Solo redirige a main
+    '''
+    tic0 = time.time()
+    for xHeader in bottle.request.headers:
+        print(xHeader,":",bottle.request.headers[xHeader])
+    prefixPath=""
+
+    if('X-PrefixPath' in bottle.request.headers):
+        prefixPath=bottle.request.headers['X-PrefixPath']
+
+    if('X-Forwarded-Server' in bottle.request.headers):
+        hostList=bottle.request.headers['X-PrefixPath'].split(",")
+        host=hostList[0]
+    else:
+        auxUrl=bottle.request.urlparts
+        host=auxUrl[0]+"://"+auxUrl[1]
+
+    if (prefixPath!=""):
+        goto="{0:s}/main".format(prefixPath)
+    else:
+        goto="{0:s}/main".format(host)
+
+    print("TIME: Procesamiento de respuesta:" , time.time() - tic0, " segundos.")    
+
+    bottle.response.set_header('Location','main')
+    bottle.response.status=303
+
 #
 #----------------------------------------------------------------------------------------------------
 #
