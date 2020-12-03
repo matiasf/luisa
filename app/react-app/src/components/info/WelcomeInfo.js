@@ -4,7 +4,7 @@ function WelcomeInfo() {
         <div className="container text-left">
             <h1 className="text-center"><strong>LUISA</strong></h1>
 
-            <p className="lead">La aplicación LUISA en homenaje a <u><a className="text-white"
+            <p className="lead">La aplicación LUISA en homenaje a <u><a className="text-grey"
                                                                         href="https://es.wikipedia.org/wiki/Luisa_Cuesta">Luisa
                 Cuesta</a></u>, es un esfuerzo colectivo para transcribir textos del período dictatorial y
                 pre dictatorial uruguayo que por diversas razones es difícil
@@ -13,16 +13,14 @@ function WelcomeInfo() {
             </p>
             <div className="row">
                 <div className="col-lg-3">
-                    <svg viewBox="0 0 200 200" width="100%"
-                         height="20%"
+                    <svg viewBox="0 0 50 50" width="100%" height="20%"
                          fill="currentColor">
                         <circle cx="50%" cy="50%" r="50%" fill="grey"/>
-                        <svg viewBox="0 -30 200 200" preserveAspectRatio="xMaxYMax meet" className="bi" width="100%"
-                             height="100%"
+                        <svg viewBox="0 -10 50 50" preserveAspectRatio="xMaxYMax meet" className="bi"
                              fill="currentColor">
                             <use width="100%" height="65%" href="bootstrap-icons/bootstrap-icons.svg#receipt"/>
                         </svg>
-                    </svg>
+              </svg>
 
                     <h4 className="text-center">Recuperación de Archivos </h4>
                     <p className="lead"> Se recuperaron archivos de varias fuentes donde se almacena información sobre
@@ -30,11 +28,11 @@ function WelcomeInfo() {
                         procedimientos represivos, fichas policiales, informes, etc.</p>
                 </div>
                 <div className="col-lg-3">
-                    <svg viewBox="0 0 200 200" width="100%"
+                    <svg viewBox="0 0 50 50" width="100%"
                          height="20%"
                          fill="currentColor">
                         <circle cx="50%" cy="50%" r="50%" fill="grey"/>
-                        <svg viewBox="0 -30 200 200" preserveAspectRatio="xMaxYMax meet" className="bi" width="100%"
+                        <svg viewBox="0 -10 50 50" preserveAspectRatio="xMaxYMax meet" className="bi" width="100%"
                              height="100%"
                              fill="currentColor">
                             <use width="100%" height="65%" href="bootstrap-icons/bootstrap-icons.svg#pencil"/>
@@ -48,11 +46,11 @@ function WelcomeInfo() {
                     </p>
                 </div>
                 <div className="col-lg-3">
-                    <svg viewBox="0 0 200 200" width="100%"
+                    <svg viewBox="0 0 50 50" width="100%"
                          height="20%"
                          fill="currentColor">
                         <circle cx="50%" cy="50%" r="50%" fill="grey"/>
-                        <svg viewBox="0 -30 200 200" preserveAspectRatio="xMaxYMax meet" className="bi" width="100%"
+                        <svg viewBox="0 -10 50 50" preserveAspectRatio="xMaxYMax meet" className="bi" width="100%"
                              height="100%"
                              fill="currentColor">
                             <use width="100%" height="65%" href="bootstrap-icons/bootstrap-icons.svg#braces"/>
@@ -66,11 +64,11 @@ function WelcomeInfo() {
                     </p>
                 </div>
                 <div className="col-lg-3">
-                    <svg viewBox="0 0 200 200" width="100%"
+                    <svg viewBox="0 0 50 50" width="100%"
                          height="20%"
                          fill="currentColor">
                         <circle cx="50%" cy="50%" r="50%" fill="grey"/>
-                        <svg viewBox="0 -30 200 200" preserveAspectRatio="xMaxYMax meet" className="bi" width="100%"
+                        <svg viewBox="0 -10 50 50" preserveAspectRatio="xMaxYMax meet" className="bi" width="100%"
                              height="100%"
                              fill="currentColor">
                             <use width="100%" height="65%" href="bootstrap-icons/bootstrap-icons.svg#eyeglasses"/>
@@ -82,20 +80,14 @@ function WelcomeInfo() {
                         de la dictadura.</p>
                 </div>
             </div>
-
-            <p className="lead">Entre todos, cada quien a su ritmo, podemos ayudar a conocer la verdad.
-            </p>
-            <p className="lead">¡Muchas gracias por su tiempo y su colaboración!
-            </p>
-
             <p className="lead">
-                <a className="text-white" href="mailto:cruzar@fic.edu.uy?subject=Luisa: ">
+                <a className="text-grey" href="mailto:cruzar@fic.edu.uy?subject=Luisa: ">
                     <svg viewBox="0 0 50 50" preserveAspectRatio="xMaxYMax meet" className="bi" width="4%" height="4%"
                          fill="currentColor">
                         <use width="100%" height="100%" href="bootstrap-icons/bootstrap-icons.svg#envelope"/>
                     </svg>
                 </a>{' | '}
-                <a className="text-white"
+                <a className="text-grey"
                    href="https://www.instagram.com/proyecto.luisa/?hl=es-la">
                     <svg viewBox="0 0 50 50" preserveAspectRatio="xMaxYMax meet" className="bi" width="4%" height="4%"
                          fill="currentColor">
@@ -103,7 +95,7 @@ function WelcomeInfo() {
                     </svg>
                 </a>
             </p>
-            <a className="btn btn-light js-scroll-trigger" href="#images">¡A las imágenes!</a>
+            <a className="btn btn-dark js-scroll-trigger" href="#images">¡A las imágenes!</a>
         </div>
     );
 

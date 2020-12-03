@@ -41,61 +41,84 @@ function AboutUs() {
             <h2>Equipo de Trabajo</h2>
             <br/>
             <br/>
-            <h3>Facultad de Información y Comunicación</h3>
-            <h4>Sección Periodismo</h4>
-            <div className="list-group">
-                <a className="list-group-item list-group-item-action flex-column align-items-start">
-                    <div className="d-flex w-100 justify-content-between">
-                        Profesor Adjunto Samuel Blixen
-                    </div>
-                </a>
-                <a className="list-group-item list-group-item-action flex-column align-items-start">
-                    <div className="d-flex w-100 justify-content-between">
-                        Asistente Betania Núñez
-                    </div>
-                </a>
-            </div>
-            <h4>Departamento de Fuentes Documentales, Recursos y Servicios</h4>
-            <div className="list-group">
-                <a className="list-group-item list-group-item-action flex-column align-items-start">
-                    <div className="d-flex w-100 justify-content-between">
-                        Profesor Adjunto Fabián Hernández Muñiz
-                    </div>
-                </a>
-            </div>
-            <br/>
-            <br/>
-            <h3>Facultad de Ingeniería</h3>
-            <h4>Instituto de Computación</h4>
-            <div className="list-group">
-                <a className="list-group-item list-group-item-action flex-column align-items-start">
-                    <div className="d-flex w-100 justify-content-between">
-                        Profesor Emérito Juan José Cabezas
-                    </div>
-                </a>
-
-                <a className="list-group-item list-group-item-action flex-column align-items-start">
-                    <div className="d-flex w-100 justify-content-between">
-                        Profesor Adjunto Fernando Carpani
-                    </div>
-                </a><a className="list-group-item list-group-item-action flex-column align-items-start">
-                <div className="d-flex w-100 justify-content-between">
-                    Profesora Adjunta Lorena Etcheverry
-                </div>
-            </a>
-            </div>
-            <h4>Instituto de Ingeniería Eléctrica</h4>
-            <h5>Coordinador del equipo</h5>
-            <a className="list-group-item list-group-item-action flex-column align-items-start">
-                <div className="d-flex w-100 justify-content-between">
-                    Profesor Titular Gregory Randall
-                </div>
-            </a>
-            <a className="list-group-item list-group-item-action flex-column align-items-start">
-                <div className="d-flex w-100 justify-content-between">
-                    Profesor Adjunto Ignacio Ramírez
-                </div>
-            </a>
+            
+ 
+            
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+<div id="accordion">
+  <div className="card">
+    <div className="card-header">
+        <button className="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" data-parent="#accordion" aria-controls="collapseOne">
+          Facultad de Información y Comunicación
+        </button>
+    </div>	
+	<div id="collapseOne" className="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+      <div className="card-body">
+        Sección Periodismo: Profesor Adjunto Samuel Blixen, Asistente Betania Núñez
+		Departamento de Fuentes Documentales, Recursos y Servicios: Profesor Adjunto Fabián Hernández Muñiz
+      </div>
+    </div>
+  </div>
+  <div className="card">
+    <div className="card-header" id="headingTwo">
+      <h5 className="mb-0">
+        <button className="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Facultad de Ingeniería
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div className="card-body">
+        Instituto de Computación: Profesor Emérito Juan José Cabezas, Profesor Adjunto Fernando Carpani, Profesora Adjunta Lorena Etcheverry
+        Instituto de Ingeniería Eléctrica: Profesor Titular Gregory Randall, Profesor Adjunto Ignacio Ramírez (Coordinador del equipo)
+      </div>
+    </div>
+  </div>
+  <div className="card">
+    <div className="card-header" id="headingThree">
+      <h5 className="mb-0">
+        <button className="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Collapsible Group Item #3
+        </button>
+      </h5>
+    </div>
+    <div id="collapseThree" className="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+      <div className="card-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 
             <br/>
 

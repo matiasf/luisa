@@ -3,10 +3,10 @@ import './introductino-vis.css';
 function IntroductionVis() {
 
     return (
-        <div className="container-fluid banner-background text-right">
+        <div className="text-right">
             <div className="row">
                 <div className="col-md-4">
-                    <img className="rounded float-left" alt="luisa dibujo" src="luisa-theme/luisa_dibujo_chico.png"/>
+                    <img className="rounded float-left" alt="luisa dibujo" src="luisa-theme/luisa_dibujo_mediano_1.png"/>
                 </div>
 
                 <div className="col-md-8">

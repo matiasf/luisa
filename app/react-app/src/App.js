@@ -78,15 +78,15 @@ class App extends React.Component {
                 </div>
             </nav>
 
-            <section className="bg-warning text-black parallax" id="page-top">
+            <section className="text-black banner-background" id="page-top">
                 <IntroductionVis/>
             </section>
 
-            <section id="images">
+            <section id="images" className="parallax">
                 <Images/>
             </section>
 
-            <section id="welcomeinfo" className="text-white parallax">
+            <section id="welcomeinfo" className="text-grey">
                 <WelcomeInfo/>
             </section>
 
