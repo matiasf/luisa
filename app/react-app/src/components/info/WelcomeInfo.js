@@ -2,9 +2,9 @@ function WelcomeInfo() {
 
     return (
         <div className="container text-left">
-            <h1 className="text-center"><strong>LUISA</strong></h1>
+            <h1 className="text-center alternate-font"><strong>LUISA</strong></h1>
 
-            <p className="lead">La aplicación LUISA en homenaje a <u><a className="text-grey"
+            <p className="lead">La aplicación LUISA en homenaje a <u><a className="text-dark"
                                                                         href="https://es.wikipedia.org/wiki/Luisa_Cuesta">Luisa
                 Cuesta</a></u>, es un esfuerzo colectivo para transcribir textos del período dictatorial y
                 pre dictatorial uruguayo que por diversas razones es difícil
@@ -31,7 +31,7 @@ function WelcomeInfo() {
                     <svg viewBox="0 0 50 50" width="100%"
                          height="20%"
                          fill="currentColor">
-                        <circle cx="50%" cy="50%" r="50%" fill="grey"/>
+                        <circle cx="50%" cy="50%" r="50%" fill="rgb(239, 195, 74)"/>
                         <svg viewBox="0 -10 50 50" preserveAspectRatio="xMaxYMax meet" className="bi" width="100%"
                              height="100%"
                              fill="currentColor">
