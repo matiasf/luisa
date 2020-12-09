@@ -85,24 +85,57 @@ function AboutUs() {
       <h5 className="mb-0">
         <button className="btn btn-link  text-dark collapsed" data-toggle="collapse" 
 		data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          Organizaciones Vinculadas y Recursos de Apoyo
+          Organizaciones Vinculadas
         </button>
       </h5>
     </div>
     <div id="collapseThree" className="collapse lead" aria-labelledby="headingThree" data-parent="#accordion">
       <div className="card-body parallax">
-        <p>Madres y Familiares de Uruguayos Detenidos-Desaparecidos</p>
-		<p>Grupo de Trabajo por Verdad y Justicia</p>
-		<p><b>Archivo Berrutti</b>las tres millones de imágenes los
-                documentos del Cuerpo de
-                Fusileros Navales y el Archivo Histórico de la ex Dirección Nacional de Información e
+        <p><b>Madres y Familiares de Uruguayos Detenidos-Desaparecidos</b></p>
+		<p>Un grupo de madres y familiares de uruguayos detenidos desaparecidos que 
+		desde los años ´70 empezaron a juntarse para buscarlos, aún con la esperanza de 
+		encontrarlos vivos. Desde la apertura democrática caminan juntos respetando 
+		la diversidad de pensamientos que los caracteriza pero unidos en torno a sus principales 
+		objetivos: Verdad, justicia, memoria y nunca más.</p>
+		<p><b>Grupo de Trabajo por Verdad y Justicia</b></p>
+		<p>Desde el momento de su creación el 19 de
+mayo de 2015 el Grupo de Trabajo por Verdad y Justicia investiga los crímenes de lesa humanidad
+cometidos por agentes del Estado o contando con su complicidad, durante el
+período de actuación ilegal o en su fase terrorista.
+El Grupo se constituyó para contribuir en dar luz a tan graves hechos en
+pos de la verdad histórica y promover la justicia en el marco del Estado de
+Derecho sobre la base de estándares internacionales de Verdad, Justicia,
+Memoria y Garantías de No Repetición.
+ </p>
+	</div>
+    </div>
+  </div>
+  <div className="card mb-4">
+    <div className="card-header banner-background" id="headingFour">
+      <h5 className="mb-0">
+        <button className="btn btn-link  text-dark collapsed" data-toggle="collapse" 
+		data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          Recursos de Apoyo
+        </button>
+      </h5>
+    </div>
+    <div id="collapseFour" className="collapse lead" aria-labelledby="headingFour" data-parent="#accordion">
+      <div className="card-body parallax">
+	  <p>Las tres millones de imágenes con las que cuenta el Proyecto LUISA provienen de una variedad de fuentes incluyendo 
+	  los documentos del Cuerpo de Fusileros Navales y el Archivo Histórico de la ex Dirección Nacional de Información e
                 Inteligencia.
                 También se suma a este proceso aquella documentación a la que se acceda a instancias del
                 Grupo de Trabajo por Verdad y Justicia y en el marco de las acciones de investigación e
-                intervención en los distintos archivos públicos.https://www.montevideo.com.uy/Noticias/Abrieron-el-archivo-Berrutti-encontrado-en-el-Ministerio-de-Defensa-en-2006-uc350124</p>
+                intervención en los distintos archivos públicos.</p>
+		<p><b>Archivo Berrutti</b></p>
+		<p> Miles de archivos microfilmados que fueron encontrados en el Ministerio de Defensa, en la casa del
+coronel Castiglioni, y en la ex Escuela de Inteligencia del Ejército. Se recolectaron durante la
+				gestión de la ministra Azucena Berrutti.
+				</p>
       </div>
     </div>
   </div>
+
 </div>
 			
 

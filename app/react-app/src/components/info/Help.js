@@ -9,7 +9,7 @@ function Help() {
 
             </p>
             <div className="row">
-                <div className="col-6">
+                <div className="col-6 lead">
                     <h4>SÍ incluya los siguientes detalles: </h4>
                     <div>
                         <ul>
@@ -17,12 +17,12 @@ function Help() {
                             </li>
                             <li>Acentos, comas y demás símbolos
                             </li>
-                            <li>Antes de cada palabra ilegible, escriba un símbolo arroba (@)
+                            <li>Antes de cada palabra ilegible, escriba un arroba (@)
                             </li>
                         </ul>
                     </div>
                 </div>
-                <div className="col-6">
+                <div className="col-6 lead">
 
                     <h4>NO incluya los siguientes detalles: </h4>
                     <div>
@@ -39,7 +39,7 @@ function Help() {
             </div>
 
             <h4>Sobre el uso del Teclado y Ratón</h4>
-            <div>
+            <div className="lead">
                 <ul>
                     <li>
                         Puede enviar con el botón de "Enviar Datos" o con la tecla "Enter".
