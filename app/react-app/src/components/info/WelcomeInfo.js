@@ -13,13 +13,15 @@ function WelcomeInfo() {
             </p>
             <div className="row">
                 <div className="col-lg-3">
-                    <svg viewBox="0 0 50 50" width="100%" height="20%"
+                    <svg viewBox="0 0 50 50" width="100%" height="150"
                          fill="currentColor">
                         <circle cx="50%" cy="50%" r="50%" fill="grey"/>
-                        <svg viewBox="0 -10 50 50" preserveAspectRatio="xMaxYMax meet" className="bi"
+						       <svg viewBox="0 -10 50 50" preserveAspectRatio="xMaxYMax meet" className="bi" width="100%"
+                             height="100%"
                              fill="currentColor">
                             <use width="100%" height="65%" href="bootstrap-icons/bootstrap-icons.svg#receipt"/>
                         </svg>
+
               </svg>
 
                     <h4 className="text-center">Recuperación de Archivos </h4>
@@ -28,16 +30,16 @@ function WelcomeInfo() {
                         procedimientos represivos, fichas policiales, informes, etc.</p>
                 </div>
                 <div className="col-lg-3">
-                    <svg viewBox="0 0 50 50" width="100%"
-                         height="20%"
+                    <svg viewBox="0 0 50 50" width="100%" height="150"
                          fill="currentColor">
                         <circle cx="50%" cy="50%" r="50%" fill="rgb(239, 195, 74)"/>
-                        <svg viewBox="0 -10 50 50" preserveAspectRatio="xMaxYMax meet" className="bi" width="100%"
+						       <svg viewBox="0 -10 50 50" preserveAspectRatio="xMaxYMax meet" className="bi" width="100%"
                              height="100%"
                              fill="currentColor">
                             <use width="100%" height="65%" href="bootstrap-icons/bootstrap-icons.svg#pencil"/>
                         </svg>
-                    </svg>
+
+              </svg>
 
                     <h4 className="text-center">Transcripción de Imágenes</h4>
                     <p className="lead">Pedimos que nos ayude transcribiendo fotos de documentos, de la cual le
@@ -46,17 +48,17 @@ function WelcomeInfo() {
                     </p>
                 </div>
                 <div className="col-lg-3">
-                    <svg viewBox="0 0 50 50" width="100%"
-                         height="20%"
+
+<svg viewBox="0 0 50 50" width="100%" height="150"
                          fill="currentColor">
                         <circle cx="50%" cy="50%" r="50%" fill="grey"/>
-                        <svg viewBox="0 -10 50 50" preserveAspectRatio="xMaxYMax meet" className="bi" width="100%"
+						       <svg viewBox="0 -10 50 50" preserveAspectRatio="xMaxYMax meet" className="bi" width="100%"
                              height="100%"
                              fill="currentColor">
                             <use width="100%" height="65%" href="bootstrap-icons/bootstrap-icons.svg#braces"/>
                         </svg>
-                    </svg>
 
+              </svg>
                     <h4 className="text-center">Aplicación de Técnicas de Cruzamiento</h4>
                     <p className="lead">Se utilizan
                         técnicas de cruzamiento de información para procesar de manera automatica y eficiente los
@@ -64,16 +66,16 @@ function WelcomeInfo() {
                     </p>
                 </div>
                 <div className="col-lg-3">
-                    <svg viewBox="0 0 50 50" width="100%"
-                         height="20%"
+<svg viewBox="0 0 50 50" width="100%" height="150"
                          fill="currentColor">
                         <circle cx="50%" cy="50%" r="50%" fill="grey"/>
-                        <svg viewBox="0 -10 50 50" preserveAspectRatio="xMaxYMax meet" className="bi" width="100%"
+						       <svg viewBox="0 -10 50 50" preserveAspectRatio="xMaxYMax meet" className="bi" width="100%"
                              height="100%"
                              fill="currentColor">
                             <use width="100%" height="65%" href="bootstrap-icons/bootstrap-icons.svg#eyeglasses"/>
                         </svg>
-                    </svg>
+
+              </svg>
 
                     <h4 className="text-center">Análisis</h4>
                     <p className="lead">Los documentos se categorizan y analisan para mejor entender el funcionamiento
