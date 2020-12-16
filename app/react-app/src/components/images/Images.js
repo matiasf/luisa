@@ -117,20 +117,21 @@ class Images extends React.Component {
 
                 {this.state.loading && (
                     <div className="captcha-form-controls col-md-12 d-flex justify-content-center">
-                        <div className="spinner-border text-white" style={{width: '3rem', height: '3rem', role: 'status'}}>
+                        <div className="spinner-border text-white"
+                             style={{width: '3rem', height: '3rem', role: 'status'}}>
                         </div>
                         <span className="sr-only">Enviando datos...</span>
                     </div>)}
                 {!this.state.loading && (
                     <div className="captcha-form-controls col-md-12 d-flex justify-content-center btn-toolbar">
                         <div className="btn-group mr-2">
-                            <button className="btn btn-white btn-lg" id="enviar" onClick={this.handleSendDataToLuisa}>
+                            <button className="btn btn-light btn-lg" id="enviar" onClick={this.handleSendDataToLuisa}>
                                 Enviar datos
                             </button>
                         </div>
 
                         <div className="btn-group mr-2">
-                            <button className="btn btn-white btn-lg" id="enviar" onClick={this.handleSendGiradaToLuisa}>
+                            <button className="btn btn-light btn-lg" id="enviar" onClick={this.handleSendGiradaToLuisa}>
                                 Imagen girada
                             </button>
                         </div>
