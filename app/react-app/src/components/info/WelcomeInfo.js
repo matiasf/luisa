@@ -13,7 +13,7 @@ function WelcomeInfo() {
             </p>
             <div className="row">
                 <div className="col-lg-3">
-                    <svg viewBox="0 0 50 50" width="100%" height="150"
+                    <svg viewBox="0 0 50 50" width="100%" height="130"
                          fill="currentColor">
                         <circle cx="50%" cy="50%" r="50%" fill="grey"/>
 						       <svg viewBox="0 -10 50 50" preserveAspectRatio="xMaxYMax meet" className="bi" width="100%"
@@ -30,7 +30,7 @@ function WelcomeInfo() {
                         procedimientos represivos, fichas policiales, informes, etc.</p>
                 </div>
                 <div className="col-lg-3">
-                    <svg viewBox="0 0 50 50" width="100%" height="150"
+                    <svg viewBox="0 0 50 50" width="100%" height="130"
                          fill="currentColor">
                         <circle cx="50%" cy="50%" r="50%" fill="rgb(239, 195, 74)"/>
 						       <svg viewBox="0 -10 50 50" preserveAspectRatio="xMaxYMax meet" className="bi" width="100%"
@@ -49,7 +49,7 @@ function WelcomeInfo() {
                 </div>
                 <div className="col-lg-3">
 
-<svg viewBox="0 0 50 50" width="100%" height="150"
+<svg viewBox="0 0 50 50" width="100%" height="130"
                          fill="currentColor">
                         <circle cx="50%" cy="50%" r="50%" fill="grey"/>
 						       <svg viewBox="0 -10 50 50" preserveAspectRatio="xMaxYMax meet" className="bi" width="100%"
@@ -66,7 +66,7 @@ function WelcomeInfo() {
                     </p>
                 </div>
                 <div className="col-lg-3">
-<svg viewBox="0 0 50 50" width="100%" height="150"
+<svg viewBox="0 0 50 50" width="100%" height="130"
                          fill="currentColor">
                         <circle cx="50%" cy="50%" r="50%" fill="grey"/>
 						       <svg viewBox="0 -10 50 50" preserveAspectRatio="xMaxYMax meet" className="bi" width="100%"
@@ -82,23 +82,20 @@ function WelcomeInfo() {
                         de la dictadura.</p>
                 </div>
             </div>
-            <p className="lead">
-                <a className="text-grey" href="mailto:cruzar@fic.edu.uy?subject=Luisa: ">
-                    <svg viewBox="0 0 50 50" preserveAspectRatio="xMaxYMax meet" className="bi" width="4%" height="4%"
-                         fill="currentColor">
-                        <use width="100%" height="100%" href="bootstrap-icons/bootstrap-icons.svg#envelope"/>
-                    </svg>
-                </a>{' | '}
-                <a className="text-grey"
-                   href="https://www.instagram.com/proyecto.luisa/?hl=es-la">
-                    <svg viewBox="0 0 50 50" preserveAspectRatio="xMaxYMax meet" className="bi" width="4%" height="4%"
-                         fill="currentColor">
-                        <use width="100%" height="100%" href="bootstrap-icons/bootstrap-icons.svg#camera"/>
-                    </svg>
-                </a>
+			<p className="alternate-font text-center">
+                <i><a className="text-dark" href="mailto:cruzar@fic.edu.uy?subject=Luisa: ">
+                   contacto
+                </a>{' / '}
+                <a className="text-dark" href="https://www.instagram.com/proyecto.luisa/?hl=es-la">
+                   instagram					
+                </a></i>
             </p>
+			
+			<div className="text-center">
             <a className="btn btn-dark js-scroll-trigger" href="#images">¡A las imágenes!</a>
-        </div>
+			</div>
+			</div>
+        
     );
 
 }

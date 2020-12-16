@@ -13,7 +13,9 @@ function IntroductionVis() {
                     <h1 className="alternate-font display-1 font-weight-bolder"><strong>Luisa</strong></h1>
                     <h3 className="alternate-font">Leyendo Unidos para</h3>
                     <h3 className="alternate-font">Interpretar loS Archivos</h3>
-
+<div>
+            
+			</div>
                     <a className="btn btn-light js-scroll-trigger" href="#images">¡A las imágenes!</a>
                 </div>
             </div>
