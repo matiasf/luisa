@@ -4,18 +4,13 @@ function AboutUs() {
         <div className="container">
             <h2>Quiénes Somos</h2>
             
-			<p className="lead">En esta tarea se abocan docentes-investigadores y estudiantes de la <u><a
+			<p className="lead"> Abocamos docentes-investigadores y estudiantes de la <u><a
                 className="text-white"
                 href="http://www.fiC.edu.uy">Facultad
                 de Información y Comunicación (FIC) </a></u>y de la <u><a className="text-white"
                                                                           href="http://www.fing.edu.uy">Facultad de
-                Ingeniería (FIng), </a></u>sí como miembros de <u><a className="text-white" href="https://desaparecidos.org.uy/">Madres y Familiares</a></u>. 
-				Sus objetivos, que en parte se concretan en este sitio,
-                son desarrollar estrategias que permitan la conservación y organización de los documentos adquiridos y
-                construir herramientas que faciliten el procesamiento de la información contenida en los
-                documentos para su posterior divulgación, como contribución en la búsqueda de la verdad y la
-                justicia.</p>
-				
+                Ingeniería (FIng)</a></u>,  así como miembros de <u><a className="text-white" href="https://desaparecidos.org.uy/">Madres y Familiares de Uruguayos Detenidos-Desaparecidos</a></u>. 
+				Dichos grupos, a traves del desarrollo de estrategias y herramientas de procesiamiento de datos, buscamos divulgar la informacion recabada.</p>				
             <p className="lead">En el marco del llamado 2017 a Proyectos de Extensión que emitió
                 la <u><a className="text-white"
                          href="http://www.extension.udelar.edu.uy/">Comisión

@@ -78,7 +78,7 @@ function WelcomeInfo() {
               </svg>
 
                     <h4 className="text-center">Análisis</h4>
-                    <p className="lead">Los documentos se categorizan y analisan para mejor entender el funcionamiento
+                    <p className="lead">Los documentos se categorizan y analisan para el mejor entendimiento del funcionamiento
                         de la dictadura.</p>
                 </div>
             </div>

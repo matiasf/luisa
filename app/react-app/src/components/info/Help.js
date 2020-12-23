@@ -2,7 +2,7 @@ function Help() {
 
     return (
         <div className="container">
-            <h2>Instrucciones</h2>
+            <h2>Instrucciones para la Transcripción de Imágenes</h2>
             <p className="lead">
                 Escriba el contenido de cada imagen en el recuadro usando su mejor criterio y el contexto de la imagen
                 completa.
@@ -28,9 +28,9 @@ function Help() {
                     <div>
                         <ul>
 
-                            <li>Detalles que no son texto (manchas, firmas, o puntos de un formulario)
+                            <li>No incluir detalles que no son texto (manchas, firmas, o puntos de un formulario)
                             </li>
-                            <li>Formatos al texto (subrayado, en negrita, en itálica o manuscrito)
+                            <li>No incluir formatos al texto (subrayado, en negrita, en itálica o manuscrito)
                             </li>
                         </ul>
 
