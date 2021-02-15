@@ -1,13 +1,49 @@
-import IntroductionVis from './components/info/IntroductionVis';
+import React from "react";
+
+import IntroductionVis from './components/info/intro/IntroductionVis';
 import WelcomeInfo from './components/info/WelcomeInfo';
 import Help from './components/info/Help';
 import Privacy from './components/info/Privacy';
 import AboutUs from './components/info/AboutUs';
 import Images from './components/images/Images';
 
-function App() {
-    return (
-        <div className="App">
+class App extends React.Component {
+
+    constructor(props) {
+        super(props);
+    }
+
+    initScrollingNav() {
+        window.$('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
+            if (window.location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') &&
+                window.location.hostname === this.hostname) {
+                let target = window.$(this.hash);
+                target = target.length ? target : window.$('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    window.$('html, body').animate({
+                        scrollTop: (target.offset().top - 56)
+                    }, 1000, "easeInOutExpo");
+                    return false;
+                }
+            }
+        });
+
+        window.$('.js-scroll-trigger').click(function () {
+            window.$('.navbar-collapse').collapse('hide');
+        });
+
+        window.$('body').scrollspy({
+            target: '#mainNav',
+            offset: 56
+        });
+    }
+
+    componentDidMount() {
+        this.initScrollingNav()
+    }
+
+    render() {
+        return <div className="App">
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
                 <div className="container">
                     <a className="navbar-brand js-scroll-trigger" href="#page-top"><strong>LUISA</strong></a>
@@ -22,10 +58,13 @@ function App() {
                                 <a className="nav-link js-scroll-trigger" href="#images">Imágenes</a>
                             </li>
                             <li className="nav-item">
+                                <a className="nav-link js-scroll-trigger" href="#welcomeinfo">Proyecto</a>
+                            </li>
+                            <li className="nav-item">
                                 <a className="nav-link js-scroll-trigger" href="#help">Instrucciones</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link js-scroll-trigger" href="#privacy">Compromiso de Privacidad</a>
+                                <a className="nav-link js-scroll-trigger" href="#privacy">Privacidad</a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link js-scroll-trigger" href="#about-us">Quiénes Somos</a>
@@ -39,18 +78,17 @@ function App() {
                 </div>
             </nav>
 
-	    <section className="bg-warning text-black parallax" id="page-top">
+            <section className="text-black banner-background" id="page-top">
                 <IntroductionVis/>
             </section>
-			
-			<section id="images">
+
+            <section id="images" className="parallax">
                 <Images/>
             </section>
 
-            <section className="text-white parallax">
+            <section id="welcomeinfo" className="text-grey">
                 <WelcomeInfo/>
             </section>
-
 
 
             <section id="help" className="text-white parallax">
@@ -71,7 +109,7 @@ function App() {
                 </div>
             </footer>
         </div>
-    );
+    };
 }
 
 export default App;

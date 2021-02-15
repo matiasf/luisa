@@ -13,9 +13,72 @@ class Images extends React.Component {
         this.sendRef = React.createRef()
     }
 
-    refreshImages = () => {
-        this.setState({loading: true})
-        axios.get('http://localhost:8000/main')
+    htmlProcesarRequest = giro => {
+        /*        let formLuisa = '';
+                formLuisa = 'giroImg=' + giro;
+                this.state.blocks.map(block => {
+                    if (block.context) {
+                        formLuisa += '&hash_hoja=' + block.hash;
+                    } else {
+                        formLuisa += '&oldHash_' + (block.idx - 1) + '=' + block.hash;
+                        formLuisa += '&' + block.hash + '=' + block.value;
+                    }
+                })
+
+                axios.post(process.env.REACT_APP_NOT_BACKEND_URL + '/procesar', formLuisa)
+                    .then(res => {
+                        console.debug('Luisa responde:', res);
+                        this.refreshImages();
+                    })
+                    .catch(error => console.log('Error al enviar datos', error));*/
+    }
+
+    htmlMainRequest = () => {
+        axios.get(process.env.REACT_APP_NOT_BACKEND_URL)
+            .then(res => {
+                if (res.data) {
+                    const luisaDOM = window.$('<div></div>');
+                    luisaDOM.html(res.data);
+                    console.debug('Luisa DOM:', luisaDOM);
+
+                    const blocks = window.$('.captcha-block.normalLayout', luisaDOM).map((idx, domElem) => {
+                        console.debug('DOM element: ', domElem);
+                        console.debug('DOM idx: ', idx);
+
+                        console.debug('DOM b64img', window.$('img', domElem).attr('src').replace('data:image/gif;base64,', ''));
+                        console.debug('DOM width', window.$('img', domElem).attr('width'));
+                        console.debug('DOM hash', window.$('textarea', domElem).attr('name'));
+
+                        return {
+                            'hash': window.$('textarea', domElem).attr('name'),
+                            'b64img': window.$('img', domElem).attr('src').replace('data:image/gif;base64,', ''),
+                            'width': window.$('img', domElem).attr('width').replace('px', ''),
+                            'context': false,
+                            'idx': idx + 1,
+                            'value': ''
+                        }
+                    }).toArray();
+
+                    console.debug('Luisa muestra sin contexto:', blocks);
+
+                    blocks.push({
+                        'b64img': window.$('#figuron', luisaDOM).attr('src').replace('data:image/gif;base64,', ''),
+                        'width': window.$('#figuron', luisaDOM).attr('width').replace('px', ''),
+                        'context': true,
+                        'idx': 0,
+                        'value': ''
+                    });
+
+                    this.setState({blocks: blocks, loading: false});
+                    console.debug('Luisa muestra:', blocks);
+                }
+                console.debug('Luisa dice:', res);
+
+            }).catch(error => console.log('Error obteniendo imagen', error));
+    }
+
+    csvMainRequest = () => {
+        axios.get(process.env.REACT_APP_NOT_BACKEND_URL + '/main')
             .then(res => {
                 if (res.data) {
                     const blocks = res.data.split('\n').slice(0, res.data.split('\n').length - 1).map((line, idx) => {
@@ -37,7 +100,7 @@ class Images extends React.Component {
             }).catch(error => console.log('Error obteniendo imagen', error));
     }
 
-    sendDataToLuisa = giro => {
+    csvProcesarRequest = giro => {
         let formLuisa = '';
         formLuisa = 'giroImg=' + giro;
         this.state.blocks.map(block => {
@@ -49,13 +112,37 @@ class Images extends React.Component {
             }
         })
 
-        axios.post('http://localhost:8000/procesar', formLuisa)
+        axios.post(process.env.REACT_APP_NOT_BACKEND_URL + '/procesar', formLuisa)
             .then(res => {
                 console.debug('Luisa responde:', res);
                 this.refreshImages();
             })
             .catch(error => console.log('Error al enviar datos', error));
+    }
 
+    refreshImages = () => {
+        this.setState({loading: true})
+        if (process.env.REACT_APP_INTEGRATION_MODE === 'CSV') {
+            console.debug('Enviroment', process.env.REACT_APP_NOT_BACKEND_URL);
+            this.csvMainRequest();
+        } else if (process.env.REACT_APP_INTEGRATION_MODE === 'HTML') {
+            console.debug('Enviroment', process.env.REACT_APP_NOT_BACKEND_URL);
+            this.htmlMainRequest();
+        } else {
+            console.debug('Metodo de integracion desconocido', process.env.REACT_APP_INTEGRATION_MODE)
+        }
+    }
+
+    sendDataToLuisa = giro => {
+        if (process.env.REACT_APP_INTEGRATION_MODE === 'CSV') {
+            console.debug('Enviroment', process.env.REACT_APP_NOT_BACKEND_URL);
+            this.csvProcesarRequest(giro);
+        } else if (process.env.REACT_APP_INTEGRATION_MODE === 'HTML') {
+            console.debug('Enviroment', process.env.REACT_APP_NOT_BACKEND_URL);
+            this.htmlProcesarRequest(giro);
+        } else {
+            console.debug('Metodo de integracion desconocido', process.env.REACT_APP_INTEGRATION_MODE)
+        }
         this.sendRef.current.scrollIntoView();
     }
 
@@ -64,10 +151,8 @@ class Images extends React.Component {
             const list = state.blocks.map((block, idx) => {
                 if (idx === evt.target.id) {
                     block.value = evt.target.value;
-                    return block;
-                } else {
-                    return block;
                 }
+                return block;
             });
 
             return {
@@ -89,55 +174,61 @@ class Images extends React.Component {
     }
 
     render() {
-        return <div ref={this.sendRef}>
-            <div>
-                <h1 className="text-center">Imágenes</h1>
+        console.debug('blocks before render', this.state.blocks);
+        return <div ref={this.sendRef} className="container">
+            <div className="row">
+                <h1 className="text-center text-white col-lg-12">Imágenes</h1>
 
-                <br/>
-
-                <div className="row border border-dark rounded m-3 bg-secondary">
-                    {this.state.blocks.filter(block => !block.context).map(block =>
-                        // <div className="col-md-3 d-flex align-items-start flex-column my-2" key={block.idx}>
-                        <div className="col-md-3 d-flex align-items-start flex-column my-2" key={block.idx}>
-                            <img className="img-fluid" alt="imagen_documento"
-                                 src={'data:image/gif;base64,' + block.b64img}/>
-                            <hr/>
-                            {this.state.loading && (
-                                <div className="spinner-grow" role="status">
-                                    <span className="sr-only">Loading...</span>
-                                </div>)}
-                            {!this.state.loading && (
-                                <textarea className="form-control" rows="1" id={block.idx}
-                                          style={{width: block.width + 'px', overflowX: 'visible'}}
-                                          onChange={this.handleTextInputValue}/>
-                            )}
-                        </div>
-                    )}
-                </div>
-            </div>
-
-            <br/>
-
-            {this.state.loading && (
-                <div className="captcha-form-controls col-md-12 d-flex justify-content-center">
-                    <div className="spinner-border" style={{width: '3rem', height: '3rem', role: 'status'}}>
+                <div className="col-lg-12">
+                    <div className="row border border-white rounded m-3 bg-secondary">
+                        {this.state.blocks.filter(block => !block.context).map(block => {
+                                console.debug('Render block', block);
+                                return (// <div className="col-md-3 d-flex align-items-start flex-column my-2" key={block.idx}>
+                                    <div className="col-md-3 d-flex align-items-start flex-column my-2" key={block.idx}>
+                                        <img className="img-fluid" alt="imagen_documento"
+                                             src={'data:image/gif;base64,' + block.b64img}/>
+                                        <hr/>
+                                        {this.state.loading && (
+                                            <div className="spinner-grow" role="status">
+                                                <span className="sr-only">Loading...</span>
+                                            </div>)}
+                                        {!this.state.loading && (
+                                            <textarea className="form-control" rows="1" id={block.idx}
+                                                      style={{width: block.width + 'px', overflowX: 'visible'}}
+                                                      onChange={this.handleTextInputValue}/>
+                                        )}
+                                    </div>)
+                            }
+                        )}
                     </div>
-                    <span className="sr-only">Enviando datos...</span>
-                </div>)}
-            {!this.state.loading && (
-                <div className="captcha-form-controls col-md-12 d-flex justify-content-center">
-                    <button className="btn btn-dark btn-lg" id="enviar" onClick={this.handleSendDataToLuisa}>
-                        Enviar datos
-                    </button>
-                    <button className="btn btn-dark btn-lg" id="enviar" onClick={this.handleSendGiradaToLuisa}>
-                        Imagen girada
-                    </button>
-                </div>)}
+                </div>
 
+                {this.state.loading && (
+                    <div className="captcha-form-controls col-md-12 d-flex justify-content-center">
+                        <div className="spinner-border text-white"
+                             style={{width: '3rem', height: '3rem', role: 'status'}}>
+                        </div>
+                        <span className="sr-only">Enviando datos...</span>
+                    </div>)}
+                {!this.state.loading && (
+                    <div className="captcha-form-controls col-md-12 d-flex justify-content-center btn-toolbar">
+                        <div className="btn-group mr-2">
+                            <button className="btn btn-light btn-lg" id="enviar" onClick={this.handleSendDataToLuisa}>
+                                Enviar datos
+                            </button>
+                        </div>
+
+                        <div className="btn-group mr-2">
+                            <button className="btn btn-light btn-lg" id="enviar" onClick={this.handleSendGiradaToLuisa}>
+                                Imagen girada
+                            </button>
+                        </div>
+                    </div>)}
+            </div>
 
             <hr className="m-4"/>
 
-            <div className="text-center">
+            <div className="text-center text-white">
                 <h2><strong>Contexto</strong></h2>
                 {this.state.blocks.filter(block => block.context).map(block =>
                     <div className="col-md-12 d-flex justify-content-center" key={block.idx}>

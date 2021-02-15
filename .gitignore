@@ -3,6 +3,7 @@ results
 
 # Idea IDEs folder
 .idea
+*.iml
 
 # Byte-compiled
 __pycache__/
@@ -10,7 +11,6 @@ __pycache__/
 *$py.class
 
 # Environments
-.env
 .venv
 env/
 venv/
@@ -22,3 +22,6 @@ venv.bak/
 /node_modules
 /.pnp
 .pnp.js
+
+# Cache files
+.eslintcache
