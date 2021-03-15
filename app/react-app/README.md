@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# LUISA React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+En este módulo se enmarca la aplicación web de [LUISA](https://mh.udelar.edu.uy/luisa/?lang=es).
 
-## Available Scripts
+## Comandos y parámetros de configuración
 
-In the project directory, you can run:
+En esta sección se ven comandos comunes tanto para realizar el deploy a producción como para desarrollar.
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Ejecuta la aplicación en modo development de React, típicamente utilizado para desarrollo.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Acceder a la app a través del siguiente link en el navegador [http://localhost:3000](http://localhost:3000).
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+La página se recarga automáticamente si se realizan cambios en los archivos js de React.\
+Se pueden ver los errores de la app React en la consola del navegador.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Crea la aplicación para producción bajo la carpeta `build`.\
+Estos archivos ya se encuentran minificados para ser desplegados a producción.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `tar -czvf luisa.tar.gz build`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Comando para crear luisa.tar.gz a partir de un build generado.\
+Por ejemplo, para crear el `build` para testing (u otro ambiente con contexto) debemos especificar la variable `PUBLIC_URL`, ejecutar `npm run build` y este último comando para generar el tar.gz deseado.
 
-### `npm run eject`
+## Variables de configuración
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+La configuración de los distintos ambientes está impactada en los archivos `.env` de esta misma carpeta.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### `.env`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Valores por defecto de las variables definidas.
+Típicamente utilizadas al levantar el ambiente de desarrollo.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### `.env.local`
 
-## Learn More
+Valores para el ambiente local.
+Ya sea al levantar el ambiente de desarrollo, o crear una nueva carpeta `build` para deploy, los valores aqui sobreescribirán todos los valores del resto de archivos.
+Está agregado al `.gitignore` ya que es utilizado para configuraciones particulares del ambiente de ejecución local o particular (ej. testing).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### `.env.local.produccion`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Valores  de las variables definidas en `npm run build`.
+Estos valores son los que se utilizaran en producción.
 
-### Code Splitting
+## Variables de entorno
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Las variables REACT_APP son las definidas por la aplicación, el resto son definidas por React.
 
-### Analyzing the Bundle Size
+### `REACT_APP_NOT_BACKEND_URL`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+URL base donde se aloja el servicio de backend para consumo y envio de imagenes.\
+Esto será invocando por AJAX, ver `Images.js`
 
-### Making a Progressive Web App
+### `REACT_APP_INTEGRATION_MODE`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+En caso de querer invocar LUISA contra el backend implementado en CSV (sandbox), colocar el valor CSV.\
+Por el contrario, si se quiere invocar LUISA contra el backend actual implementado en python con HTML, colocar el valor HTML.
 
-### Advanced Configuration
+### `PUBLIC_URL`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+En caso de ser necesario cambiar la URL base del sitio para obtener archivos estáticos, agregar el prefijo en esta variable.
+Un caso de uso es el deploy a testing que incluye un prefijo en la URL.
+Valor de ejemplo `PUBLIC_URL=/mh/dev`
