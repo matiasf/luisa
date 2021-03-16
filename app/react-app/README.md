@@ -25,7 +25,7 @@ Estos archivos ya se encuentran minificados para ser desplegados a producción.
 Comando para crear luisa.tar.gz a partir de un build generado.\
 Por ejemplo, para crear el `build` para testing (u otro ambiente con contexto) debemos especificar la variable `PUBLIC_URL`, ejecutar `npm run build` y este último comando para generar el tar.gz deseado.
 
-## Variables de configuración
+## Archivos de configuracion de entorno
 
 La configuración de los distintos ambientes está impactada en los archivos `.env` de esta misma carpeta.
 
