@@ -7,34 +7,38 @@ class Images extends React.Component {
         super(props);
         this.state = {
             blocks: [],
-            loading: true
+            loading: true,
+            hashHoja: ''
         };
 
         this.sendRef = React.createRef()
     }
 
     htmlProcesarRequest = giro => {
-        /*        let formLuisa = '';
-                formLuisa = 'giroImg=' + giro;
-                this.state.blocks.map(block => {
-                    if (block.context) {
-                        formLuisa += '&hash_hoja=' + block.hash;
-                    } else {
-                        formLuisa += '&oldHash_' + (block.idx - 1) + '=' + block.hash;
-                        formLuisa += '&' + block.hash + '=' + block.value;
-                    }
-                })
-
-                axios.post(process.env.REACT_APP_NOT_BACKEND_URL + '/procesar', formLuisa)
-                    .then(res => {
-                        console.debug('Luisa responde:', res);
-                        this.refreshImages();
-                    })
-                    .catch(error => console.log('Error al enviar datos', error));*/
+        // let formLuisa = '';
+        // this.state.blocks.map(block => {
+        //     if (block.context) {
+        //         formLuisa += '&hash_hoja=' + this.state.hashHoja;
+        //     } else {
+        //         formLuisa += '&oldHash_' + (block.idx - 1) + '=' + block.hash;
+        //         formLuisa += '&' + block.hash + '=' + block.value;
+        //     }
+        // });
+        //
+        // formLuisa = 'hasCookies=' + navigator.cookieEnabled + '&giroImg=' + giro + formLuisa;
+        //
+        // console.debug('formSend', formLuisa);
+        // axios.post(process.env.REACT_APP_NOT_BACKEND_URL + '/procesar', formLuisa)
+        //     .then(res => {
+        //         console.debug('Luisa responde:', res);
+        //         this.refreshImages();
+        //     })
+        //     .catch(error => console.error('Error al enviar datos', error));
+        this.refreshImages();
     }
 
     htmlMainRequest = () => {
-        axios.get(process.env.REACT_APP_NOT_BACKEND_URL)
+        axios.get(process.env.REACT_APP_NOT_BACKEND_URL + '/docdic')
             .then(res => {
                 if (res.data) {
                     const luisaDOM = window.$('<div></div>');
@@ -69,12 +73,18 @@ class Images extends React.Component {
                         'value': ''
                     });
 
-                    this.setState({blocks: blocks, loading: false});
+                    let variable = window.$("input[name='hash_hoja']", luisaDOM).val();
+                    console.debug('hashHoja', variable);
+                    this.setState({
+                        blocks: blocks,
+                        loading: false,
+                        hashHoja: variable
+                    });
                     console.debug('Luisa muestra:', blocks);
                 }
                 console.debug('Luisa dice:', res);
 
-            }).catch(error => console.log('Error obteniendo imagen', error));
+            }).catch(error => console.error('Error obteniendo imagen', error));
     }
 
     csvMainRequest = () => {
@@ -97,12 +107,11 @@ class Images extends React.Component {
                     console.debug('Luisa muestra:', blocks);
                 }
                 console.debug('Luisa dice:', res);
-            }).catch(error => console.log('Error obteniendo imagen', error));
+            }).catch(error => console.error('Error obteniendo imagen', error));
     }
 
     csvProcesarRequest = giro => {
-        let formLuisa = '';
-        formLuisa = 'giroImg=' + giro;
+        let formLuisa = 'giroImg=' + giro;
         this.state.blocks.map(block => {
             if (block.context) {
                 formLuisa += '&hash_hoja=' + block.hash;
@@ -117,7 +126,7 @@ class Images extends React.Component {
                 console.debug('Luisa responde:', res);
                 this.refreshImages();
             })
-            .catch(error => console.log('Error al enviar datos', error));
+            .catch(error => console.error('Error al enviar datos', error));
     }
 
     refreshImages = () => {
