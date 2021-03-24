@@ -15,26 +15,23 @@ class Images extends React.Component {
     }
 
     htmlProcesarRequest = giro => {
-        // let formLuisa = '';
-        // this.state.blocks.map(block => {
-        //     if (block.context) {
-        //         formLuisa += '&hash_hoja=' + this.state.hashHoja;
-        //     } else {
-        //         formLuisa += '&oldHash_' + (block.idx - 1) + '=' + block.hash;
-        //         formLuisa += '&' + block.hash + '=' + block.value;
-        //     }
-        // });
-        //
-        // formLuisa = 'hasCookies=' + navigator.cookieEnabled + '&giroImg=' + giro + formLuisa;
-        //
-        // console.debug('formSend', formLuisa);
-        // axios.post(process.env.REACT_APP_NOT_BACKEND_URL + '/procesar', formLuisa)
-        //     .then(res => {
-        //         console.debug('Luisa responde:', res);
-        //         this.refreshImages();
-        //     })
-        //     .catch(error => console.error('Error al enviar datos', error));
-        this.refreshImages();
+        let formLuisa = '';
+        this.state.blocks.map(block => {
+            if (!block.context) {
+                formLuisa += '&oldHash_' + (block.idx - 1) + '=' + block.hash;
+                formLuisa += '&' + block.hash + '=' + block.value;
+            }
+        });
+
+        formLuisa = 'hasCookies=' + navigator.cookieEnabled + '&hash_hoja=' + this.state.hashHoja + '&giroImg=' + giro + formLuisa;
+
+        console.debug('formSend', formLuisa);
+        axios.post(process.env.REACT_APP_NOT_BACKEND_URL + '/procesar', formLuisa)
+            .then(res => {
+                console.debug('Luisa responde:', res);
+                this.refreshImages();
+            })
+            .catch(error => console.error('Error al enviar datos', error));
     }
 
     htmlMainRequest = () => {
@@ -51,10 +48,10 @@ class Images extends React.Component {
 
                         console.debug('DOM b64img', window.$('img', domElem).attr('src').replace('data:image/gif;base64,', ''));
                         console.debug('DOM width', window.$('img', domElem).attr('width'));
-                        console.debug('DOM hash', window.$('textarea', domElem).attr('name'));
+                        console.debug('DOM hash', window.$('input.captcha', domElem).attr('name'));
 
                         return {
-                            'hash': window.$('textarea', domElem).attr('name'),
+                            'hash': window.$('input.captcha', domElem).attr('name'),
                             'b64img': window.$('img', domElem).attr('src').replace('data:image/gif;base64,', ''),
                             'width': window.$('img', domElem).attr('width').replace('px', ''),
                             'context': false,
@@ -73,8 +70,8 @@ class Images extends React.Component {
                         'value': ''
                     });
 
-                    let variable = window.$("input[name='hash_hoja']", luisaDOM).val();
-                    console.debug('hashHoja', variable);
+                    const variable = window.$("input[name='hash_hoja']", luisaDOM).val();
+
                     this.setState({
                         blocks: blocks,
                         loading: false,
@@ -202,7 +199,7 @@ class Images extends React.Component {
                                                 <span className="sr-only">Loading...</span>
                                             </div>)}
                                         {!this.state.loading && (
-                                            <textarea className="form-control" rows="1" id={block.idx}
+                                            <input className="form-control" rows="1" id={block.idx}
                                                       style={{width: block.width + 'px', overflowX: 'visible'}}
                                                       onChange={this.handleTextInputValue}/>
                                         )}
