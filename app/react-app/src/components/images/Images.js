@@ -201,7 +201,7 @@ class Images extends React.Component {
                                         {!this.state.loading && (
                                             <input className="form-control" id={block.idx} autoFocus={index === 0}
                                                 // Comento linea de estilo para prueba con cajas de tamañno fijo
-                                                // style={{width: block.width + 'px', overflowX: 'visible'}}
+                                                   style={{width: block.width + 'px', overflowX: 'visible', maxWidth: 'max-content'}}
                                                    onChange={this.handleTextInputValue}
                                                    onKeyPress={e => {
                                                        if (e.charCode === 13) {

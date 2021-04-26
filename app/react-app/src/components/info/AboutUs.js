@@ -138,15 +138,6 @@ function AboutUs() {
                 </div>
 
             </div>
-
-
-            <br/>
-
-            <div className="captcha-form-controls col-md-12 d-flex justify-content-center">
-                <a className="btn btn-light btn-lg" href="https://forms.gle/XhaSyBFcWdVbtKtZA"
-                   target="_blank">Encuesta sobre el sistema</a>
-            </div>
-
         </div>
     );
 
