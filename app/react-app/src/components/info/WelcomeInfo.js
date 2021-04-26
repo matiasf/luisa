@@ -16,13 +16,13 @@ function WelcomeInfo() {
                     <svg viewBox="0 0 50 50" width="100%" height="130"
                          fill="currentColor">
                         <circle cx="50%" cy="50%" r="50%" fill="grey"/>
-						       <svg viewBox="0 -10 50 50" preserveAspectRatio="xMaxYMax meet" className="bi" width="100%"
+                        <svg viewBox="0 -10 50 50" preserveAspectRatio="xMaxYMax meet" className="bi" width="100%"
                              height="100%"
                              fill="currentColor">
                             <use width="100%" height="65%" href="bootstrap-icons/bootstrap-icons.svg#receipt"/>
                         </svg>
 
-              </svg>
+                    </svg>
 
                     <h4 className="text-center">Recuperación de Archivos </h4>
                     <p className="lead"> Se recuperaron archivos de varias fuentes donde se almacena información sobre
@@ -33,13 +33,13 @@ function WelcomeInfo() {
                     <svg viewBox="0 0 50 50" width="100%" height="130"
                          fill="currentColor">
                         <circle cx="50%" cy="50%" r="50%" fill="rgb(239, 195, 74)"/>
-						       <svg viewBox="0 -10 50 50" preserveAspectRatio="xMaxYMax meet" className="bi" width="100%"
+                        <svg viewBox="0 -10 50 50" preserveAspectRatio="xMaxYMax meet" className="bi" width="100%"
                              height="100%"
                              fill="currentColor">
                             <use width="100%" height="65%" href="bootstrap-icons/bootstrap-icons.svg#pencil"/>
                         </svg>
 
-              </svg>
+                    </svg>
 
                     <h4 className="text-center">Transcripción de Imágenes</h4>
                     <p className="lead">Pedimos que nos ayude transcribiendo fotos de documentos, de la cual le
@@ -49,16 +49,16 @@ function WelcomeInfo() {
                 </div>
                 <div className="col-lg-3">
 
-<svg viewBox="0 0 50 50" width="100%" height="130"
+                    <svg viewBox="0 0 50 50" width="100%" height="130"
                          fill="currentColor">
                         <circle cx="50%" cy="50%" r="50%" fill="grey"/>
-						       <svg viewBox="0 -10 50 50" preserveAspectRatio="xMaxYMax meet" className="bi" width="100%"
+                        <svg viewBox="0 -10 50 50" preserveAspectRatio="xMaxYMax meet" className="bi" width="100%"
                              height="100%"
                              fill="currentColor">
                             <use width="100%" height="65%" href="bootstrap-icons/bootstrap-icons.svg#braces"/>
                         </svg>
 
-              </svg>
+                    </svg>
                     <h4 className="text-center">Aplicación de Técnicas de Cruzamiento</h4>
                     <p className="lead">Se utilizan
                         técnicas de cruzamiento de información para procesar de manera automatica y eficiente los
@@ -66,36 +66,36 @@ function WelcomeInfo() {
                     </p>
                 </div>
                 <div className="col-lg-3">
-<svg viewBox="0 0 50 50" width="100%" height="130"
+                    <svg viewBox="0 0 50 50" width="100%" height="130"
                          fill="currentColor">
                         <circle cx="50%" cy="50%" r="50%" fill="grey"/>
-						       <svg viewBox="0 -10 50 50" preserveAspectRatio="xMaxYMax meet" className="bi" width="100%"
+                        <svg viewBox="0 -10 50 50" preserveAspectRatio="xMaxYMax meet" className="bi" width="100%"
                              height="100%"
                              fill="currentColor">
                             <use width="100%" height="65%" href="bootstrap-icons/bootstrap-icons.svg#eyeglasses"/>
                         </svg>
 
-              </svg>
+                    </svg>
 
                     <h4 className="text-center">Análisis</h4>
                     <p className="lead">Los documentos se categorizan y analisan para el mejor entendimiento del funcionamiento
                         de la dictadura.</p>
                 </div>
             </div>
-			<p className="alternate-font text-center">
+            <p className="alternate-font text-center">
                 <i><a className="text-dark" href="mailto:cruzar@fic.edu.uy?subject=Luisa: ">
-                   contacto
+                    contacto
                 </a>{' / '}
-                <a className="text-dark" href="https://www.instagram.com/proyecto.luisa/?hl=es-la">
-                   instagram					
-                </a></i>
+                    <a className="text-dark" href="https://www.instagram.com/proyecto.luisa/?hl=es-la">
+                        instagram
+                    </a></i>
             </p>
-			
-			<div className="text-center">
-            <a className="btn btn-dark js-scroll-trigger" href="#images">¡A las imágenes!</a>
-			</div>
-			</div>
-        
+
+            <div className="text-center">
+                <a className="btn btn-dark js-scroll-trigger" href="#images">¡A las imágenes!</a>
+            </div>
+        </div>
+
     );
 
 }

@@ -1,10 +1,8 @@
-
 .alternate-font {
-    font-family: "Courier"
+    font-family: "Courier", serif
 }
 
 .banner-background {
-	background-color: rgb(239, 195, 74);
-	padding-bottom: 0;
-	padding-right: 5%;
+    background-color: rgb(239, 195, 74);
+    padding-right: 5%;
 }

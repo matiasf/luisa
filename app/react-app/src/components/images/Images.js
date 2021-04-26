@@ -11,7 +11,7 @@ class Images extends React.Component {
             hashHoja: ''
         };
 
-        this.sendRef = React.createRef()
+        this.sendRef = React.createRef();
     }
 
     htmlProcesarRequest = giro => {
@@ -187,7 +187,7 @@ class Images extends React.Component {
 
                 <div className="col-lg-12">
                     <div className="row border border-white rounded m-3 bg-secondary">
-                        {this.state.blocks.filter(block => !block.context).map(block => {
+                        {this.state.blocks.filter(block => !block.context).map((block, index) => {
                                 console.debug('Render block', block);
                                 return (// <div className="col-md-3 d-flex align-items-start flex-column my-2" key={block.idx}>
                                     <div className="col-md-3 d-flex align-items-start flex-column my-2" key={block.idx}>
@@ -199,9 +199,15 @@ class Images extends React.Component {
                                                 <span className="sr-only">Loading...</span>
                                             </div>)}
                                         {!this.state.loading && (
-                                            <input className="form-control" rows="1" id={block.idx}
-                                                      style={{width: block.width + 'px', overflowX: 'visible'}}
-                                                      onChange={this.handleTextInputValue}/>
+                                            <input className="form-control" id={block.idx} autoFocus={index === 0}
+                                                // Comento linea de estilo para prueba con cajas de tamañno fijo
+                                                // style={{width: block.width + 'px', overflowX: 'visible'}}
+                                                   onChange={this.handleTextInputValue}
+                                                   onKeyPress={e => {
+                                                       if (e.charCode === 13) {
+                                                           this.handleSendDataToLuisa();
+                                                       }
+                                                   }}/>
                                         )}
                                     </div>)
                             }
