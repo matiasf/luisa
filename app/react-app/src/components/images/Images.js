@@ -85,7 +85,7 @@ class Images extends React.Component {
     }
 
     csvMainRequest = () => {
-        axios.get(process.env.REACT_APP_NOT_BACKEND_URL + '/main')
+        axios.get(process.env.REACT_APP_NOT_BACKEND_URL + '/api/v0.1/get')
             .then(res => {
                 if (res.data) {
                     const blocks = res.data.split('\n').slice(0, res.data.split('\n').length - 1).map((line, idx) => {
@@ -192,7 +192,7 @@ class Images extends React.Component {
                                 return (// <div className="col-md-3 d-flex align-items-start flex-column my-2" key={block.idx}>
                                     <div className="col-md-3 d-flex align-items-start flex-column my-2" key={block.idx}>
                                         <img className="img-fluid" alt="imagen_documento"
-                                             src={'data:image/gif;base64,' + block.b64img}/>
+                                             src={block.b64img}/>
                                         <hr/>
                                         {this.state.loading && (
                                             <div className="spinner-grow" role="status">
@@ -245,7 +245,7 @@ class Images extends React.Component {
                 {this.state.blocks.filter(block => block.context).map(block =>
                     <div className="col-md-12 d-flex justify-content-center" key={block.idx}>
                         <img className="img-fluid border border-dark rounded" alt="imagen_contexto"
-                             src={'data:image/gif;base64,' + block.b64img}/>
+                             src={block.b64img}/>
                     </div>
                 )}
             </div>
