@@ -14,78 +14,8 @@ class Images extends React.Component {
         this.sendRef = React.createRef();
     }
 
-    htmlProcesarRequest = giro => {
-        let formLuisa = '';
-        this.state.blocks.map(block => {
-            if (!block.context) {
-                formLuisa += '&oldHash_' + (block.idx - 1) + '=' + block.hash;
-                formLuisa += '&' + block.hash + '=' + block.value;
-            }
-        });
-
-        formLuisa = 'hasCookies=' + navigator.cookieEnabled + '&hash_hoja=' + this.state.hashHoja + '&giroImg=' + giro + formLuisa;
-
-        console.debug('formSend', formLuisa);
-        axios.post(process.env.REACT_APP_NOT_BACKEND_URL + '/procesar', formLuisa)
-            .then(res => {
-                console.debug('Luisa responde:', res);
-                this.refreshImages();
-            })
-            .catch(error => console.error('Error al enviar datos', error));
-    }
-
-    htmlMainRequest = () => {
-        axios.get(process.env.REACT_APP_NOT_BACKEND_URL + '/docdic')
-            .then(res => {
-                if (res.data) {
-                    const luisaDOM = window.$('<div></div>');
-                    luisaDOM.html(res.data);
-                    console.debug('Luisa DOM:', luisaDOM);
-
-                    const blocks = window.$('.captcha-block.normalLayout', luisaDOM).map((idx, domElem) => {
-                        console.debug('DOM element: ', domElem);
-                        console.debug('DOM idx: ', idx);
-
-                        console.debug('DOM b64img', window.$('img', domElem).attr('src').replace('data:image/gif;base64,', ''));
-                        console.debug('DOM width', window.$('img', domElem).attr('width'));
-                        console.debug('DOM hash', window.$('input.captcha', domElem).attr('name'));
-
-                        return {
-                            'hash': window.$('input.captcha', domElem).attr('name'),
-                            'b64img': window.$('img', domElem).attr('src').replace('data:image/gif;base64,', ''),
-                            'width': window.$('img', domElem).attr('width').replace('px', ''),
-                            'context': false,
-                            'idx': idx + 1,
-                            'value': ''
-                        }
-                    }).toArray();
-
-                    console.debug('Luisa muestra sin contexto:', blocks);
-
-                    blocks.push({
-                        'b64img': window.$('#figuron', luisaDOM).attr('src').replace('data:image/gif;base64,', ''),
-                        'width': window.$('#figuron', luisaDOM).attr('width').replace('px', ''),
-                        'context': true,
-                        'idx': 0,
-                        'value': ''
-                    });
-
-                    const variable = window.$("input[name='hash_hoja']", luisaDOM).val();
-
-                    this.setState({
-                        blocks: blocks,
-                        loading: false,
-                        hashHoja: variable
-                    });
-                    console.debug('Luisa muestra:', blocks);
-                }
-                console.debug('Luisa dice:', res);
-
-            }).catch(error => console.error('Error obteniendo imagen', error));
-    }
-
     csvMainRequest = () => {
-        axios.get(process.env.REACT_APP_NOT_BACKEND_URL + '/api/v0.1/get')
+        axios.get(process.env.REACT_APP_NOT_BACKEND_URL + 'docdic?api=tsv')
             .then(res => {
                 if (res.data) {
                     const blocks = res.data.split('\n').slice(0, res.data.split('\n').length - 1).map((line, idx) => {
@@ -108,7 +38,7 @@ class Images extends React.Component {
     }
 
     csvProcesarRequest = giro => {
-        let formLuisa = 'giroImg=' + giro;
+        let formLuisa = 'hasCookies=' + navigator.cookieEnabled + '&giroImg=' + giro + '&page_generation_timestamp=' + 0;
         this.state.blocks.map(block => {
             if (block.context) {
                 formLuisa += '&hash_hoja=' + block.hash;
@@ -118,7 +48,7 @@ class Images extends React.Component {
             }
         })
 
-        axios.post(process.env.REACT_APP_NOT_BACKEND_URL + '/procesar', formLuisa)
+        axios.post(process.env.REACT_APP_NOT_BACKEND_URL + 'procesar?api=tsv', formLuisa)
             .then(res => {
                 console.debug('Luisa responde:', res);
                 this.refreshImages();
@@ -128,27 +58,11 @@ class Images extends React.Component {
 
     refreshImages = () => {
         this.setState({loading: true})
-        if (process.env.REACT_APP_INTEGRATION_MODE === 'CSV') {
-            console.debug('Enviroment', process.env.REACT_APP_NOT_BACKEND_URL);
-            this.csvMainRequest();
-        } else if (process.env.REACT_APP_INTEGRATION_MODE === 'HTML') {
-            console.debug('Enviroment', process.env.REACT_APP_NOT_BACKEND_URL);
-            this.htmlMainRequest();
-        } else {
-            console.debug('Metodo de integracion desconocido', process.env.REACT_APP_INTEGRATION_MODE)
-        }
+        this.csvMainRequest();
     }
 
     sendDataToLuisa = giro => {
-        if (process.env.REACT_APP_INTEGRATION_MODE === 'CSV') {
-            console.debug('Enviroment', process.env.REACT_APP_NOT_BACKEND_URL);
-            this.csvProcesarRequest(giro);
-        } else if (process.env.REACT_APP_INTEGRATION_MODE === 'HTML') {
-            console.debug('Enviroment', process.env.REACT_APP_NOT_BACKEND_URL);
-            this.htmlProcesarRequest(giro);
-        } else {
-            console.debug('Metodo de integracion desconocido', process.env.REACT_APP_INTEGRATION_MODE)
-        }
+        this.csvProcesarRequest(giro);
         this.sendRef.current.scrollIntoView();
     }
 
