@@ -82,6 +82,25 @@ function WelcomeInfo() {
                         de la dictadura.</p>
                 </div>
             </div>
+			<p className="text-center">
+                <a className="text-dark" href="mailto:cruzar@fic.edu.uy?subject=Luisa: ">
+                <svg viewBox="0 0 50 50" preserveAspectRatio="xMaxYMax meet" className="bi"
+					width="20" height="20"
+                    fill="currentColor">
+                        <use width="100%" height="100%" href="bootstrap-icons/bootstrap-icons.svg#envelope"/>
+				</svg></a>
+				
+				<svg viewBox="0 0 50 50" width="70" height="20" fill="currentColor">
+						<rect x="15" y="25" width="70" height="20" fill="white"/>
+				</svg>
+				
+                <a className="text-dark" href="https://www.instagram.com/proyecto.luisa/?hl=es-la">
+				<svg viewBox="0 0 50 50" preserveAspectRatio="xMaxYMax meet" className="bi"
+					width="20" height="20"
+                    fill="currentColor">
+                        <use width="100%" height="100%" href="bootstrap-icons/bootstrap-icons.svg#instagram"/>
+				</svg></a>
+			</p>
 			<p className="alternate-font text-center">
                 <i><a className="text-dark" href="mailto:cruzar@fic.edu.uy?subject=Luisa: ">
                    contacto
