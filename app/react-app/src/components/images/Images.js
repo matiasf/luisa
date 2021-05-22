@@ -68,6 +68,7 @@ class Images extends React.Component {
     }
 
     sendDataToLuisa = giro => {
+        this.setState({loading: true});
         this.csvProcesarRequest(giro);
         this.sendRef.current.scrollIntoView();
     }
@@ -89,12 +90,10 @@ class Images extends React.Component {
     }
 
     handleSendDataToLuisa = () => {
-        this.setState({loading: true});
         this.sendDataToLuisa(0);
     }
 
     handleSendGiradaToLuisa = () => {
-        this.setState({loading: true});
         this.sendDataToLuisa(1);
     }
 
