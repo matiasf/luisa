@@ -61,7 +61,7 @@ function WelcomeInfo() {
                     </svg>
                     <h4 className="text-center">Aplicación de Técnicas de Cruzamiento</h4>
                     <p className="lead">Se utilizan
-                        técnicas de cruzamiento de información para procesar de manera automatica y eficiente los
+                        técnicas de cruzamiento de información para procesar de manera automática y eficiente los
                         contenidos de los documentos digitalizados.
                     </p>
                 </div>
@@ -78,7 +78,7 @@ function WelcomeInfo() {
                     </svg>
 
                     <h4 className="text-center">Análisis</h4>
-                    <p className="lead">Los documentos se categorizan y analisan para el mejor entendimiento del funcionamiento
+                    <p className="lead">Los documentos se categorizan y analizan para el mejor entendimiento del funcionamiento
                         de la dictadura.</p>
                 </div>
             </div>
