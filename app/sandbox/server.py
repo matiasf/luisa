@@ -308,7 +308,7 @@ def main():
     b64ctx  = contexto["b64img"]
     width = contexto["width"]
     height = contexto["height"]
-    csv = f"{hash_hoja}\t{b64ctx}\t{width}\t{height}\n"    
+    csv = f"{hash_hoja}\tdata:image/gif;base64,{b64ctx}\t{width}\t{height}\n"
     #
     # obtenemos hash de bloques
     #
@@ -317,7 +317,7 @@ def main():
         b64_bloque  = b["b64img"]
         width = b["width"]
         height = b["height"]
-        csv = csv + f"{hash_bloque}\t{b64_bloque}\t{width}\t{height}\n"
+        csv = csv + f"{hash_bloque}\tdata:image/gif;base64,{b64_bloque}\t{width}\t{height}\n"
     bottle.response.content_type = 'text/plain; charset=latin1'
     bottle.response.set_header('Pragma','no-cache')
     return csv
