@@ -14,8 +14,13 @@ class Images extends React.Component {
         this.sendRef = React.createRef();
     }
 
+    componentDidMount() {
+        this.refreshImages();
+    }
+
     csvMainRequest = () => {
-        axios.get(process.env.REACT_APP_NOT_BACKEND_URL + 'docdic?api=tsv')
+        console.debug('get to ', process.env.REACT_APP_NOT_BACKEND_URL_GET);
+        axios.get(process.env.REACT_APP_NOT_BACKEND_URL_GET)
             .then(res => {
                 if (res.data) {
                     const blocks = res.data.split('\n').slice(0, res.data.split('\n').length - 1).map((line, idx) => {
@@ -48,7 +53,8 @@ class Images extends React.Component {
             }
         })
 
-        axios.post(process.env.REACT_APP_NOT_BACKEND_URL + 'procesar?api=tsv', formLuisa)
+        console.debug('post to ', process.env.REACT_APP_NOT_BACKEND_URL_POST);
+        axios.post(process.env.REACT_APP_NOT_BACKEND_URL_POST, formLuisa)
             .then(res => {
                 console.debug('Luisa responde:', res);
                 this.refreshImages();
@@ -57,7 +63,6 @@ class Images extends React.Component {
     }
 
     refreshImages = () => {
-        this.setState({loading: true})
         this.csvMainRequest();
     }
 
@@ -82,15 +87,13 @@ class Images extends React.Component {
     }
 
     handleSendDataToLuisa = () => {
+        this.setState({loading: true});
         this.sendDataToLuisa(0);
     }
 
     handleSendGiradaToLuisa = () => {
+        this.setState({loading: true});
         this.sendDataToLuisa(1);
-    }
-
-    componentDidMount() {
-        this.refreshImages();
     }
 
     render() {

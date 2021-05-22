@@ -6,6 +6,10 @@ En este módulo se enmarca la aplicación web de [LUISA](https://mh.udelar.edu.u
 
 En esta sección se ven comandos comunes tanto para realizar el deploy a producción como para desarrollar.
 
+### `npm install`
+
+Ejecuta la primera vez que realizamos la instalacion del ambiente de desarrollo, necesario para que npm descargue todas las librerias necesarias.
+
 ### `npm start`
 
 Ejecuta la aplicación en modo development de React, típicamente utilizado para desarrollo.
