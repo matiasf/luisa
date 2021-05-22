@@ -45,6 +45,7 @@ class Images extends React.Component {
     csvProcesarRequest = giro => {
         let formLuisa = 'hasCookies=' + navigator.cookieEnabled + '&giroImg=' + giro + '&page_generation_timestamp=' + 0;
         this.state.blocks.map(block => {
+            console.debug('block to send', block);
             if (block.context) {
                 formLuisa += '&hash_hoja=' + block.hash;
             } else {
@@ -73,8 +74,9 @@ class Images extends React.Component {
 
     handleTextInputValue = evt => {
         this.setState(state => {
-            const list = state.blocks.map((block, idx) => {
-                if (idx === evt.target.id) {
+            const list = state.blocks.map(block => {
+                if (block.idx === Number(evt.target.id)) {
+                    console.debug('on write value is set', evt.target.value);
                     block.value = evt.target.value;
                 }
                 return block;
@@ -97,7 +99,6 @@ class Images extends React.Component {
     }
 
     render() {
-        console.debug('blocks before render', this.state.blocks);
         return <div ref={this.sendRef} className="container">
             <div className="row">
                 <h1 className="text-center text-white col-lg-12">Imágenes</h1>
@@ -105,7 +106,6 @@ class Images extends React.Component {
                 <div className="col-lg-12">
                     <div className="row border border-white rounded m-3 bg-secondary">
                         {this.state.blocks.filter(block => !block.context).map((block, index) => {
-                                console.debug('Render block', block);
                                 return (// <div className="col-md-3 d-flex align-items-start flex-column my-2" key={block.idx}>
                                     <div className="col-md-3 d-flex align-items-start flex-column my-2" key={block.idx}>
                                         <img className="img-fluid" alt="imagen_documento"
