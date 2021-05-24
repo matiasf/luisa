@@ -3,14 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "file:node_modules/@fortawesome/fontawesome-svg-core",
-    "@fortawesome/free-solid-svg-icons": "file:node_modules/@fortawesome/free-solid-svg-icons",
     "@testing-library/jest-dom": "^5.11.5",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.21.0",
+    "i18next": "^20.3.0",
+    "i18next-xhr-backend": "^3.2.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-i18next": "^11.8.15",
     "react-scripts": "4.0.0",
     "web-vitals": "^0.2.4"
   },

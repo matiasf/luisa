@@ -1,4 +1,5 @@
-import React from "react";
+import React, {Suspense} from "react";
+import './i18n';
 
 import IntroductionVis from './components/info/intro/IntroductionVis';
 import WelcomeInfo from './components/info/WelcomeInfo';
@@ -44,70 +45,75 @@ class App extends React.Component {
 
     render() {
         return <div className="App">
-            <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-                <div className="container">
-                    <a className="navbar-brand js-scroll-trigger" href="#page-top"><strong>LUISA</strong></a>
-                    <button className="navbar-toggler" type="button" data-toggle="collapse"
-                            data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-                            aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"/>
-                    </button>
-                    <div className="collapse navbar-collapse" id="navbarResponsive">
-                        <ul className="navbar-nav ml-auto">
-                            <li className="nav-item">
-                                <a className="nav-link js-scroll-trigger" href="#images">Imágenes</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link js-scroll-trigger" href="#welcomeinfo">Proyecto</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link js-scroll-trigger" href="#help">Instrucciones</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link js-scroll-trigger" href="#privacy">Privacidad</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link js-scroll-trigger" href="#about-us">Quiénes Somos</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link js-scroll-trigger" href="https://cruzar.uy/"
-                                   target="_blank"><strong>CRUZAR</strong></a>
-                            </li>
-                        </ul>
+            <Suspense fallback={
+                <div className="spinner-grow" role="status">
+                    <span className="sr-only">Loading...</span>
+                </div>
+            }>
+                <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+                    <div className="container">
+                        <a className="navbar-brand js-scroll-trigger" href="#page-top"><strong>LUISA</strong></a>
+                        <button className="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                                aria-label="Toggle navigation">
+                            <span className="navbar-toggler-icon"/>
+                        </button>
+                        <div className="collapse navbar-collapse" id="navbarResponsive">
+                            <ul className="navbar-nav ml-auto">
+                                <li className="nav-item">
+                                    <a className="nav-link js-scroll-trigger" href="#images">Imágenes</a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link js-scroll-trigger" href="#welcomeinfo">Proyecto</a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link js-scroll-trigger" href="#help">Instrucciones</a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link js-scroll-trigger" href="#privacy">Privacidad</a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link js-scroll-trigger" href="#about-us">Quiénes Somos</a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link js-scroll-trigger" href="https://cruzar.uy/"
+                                       target="_blank"><strong>CRUZAR</strong></a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            </nav>
+                </nav>
 
-            <section className="text-black banner-background" id="page-top">
-                <IntroductionVis/>
-            </section>
+                <section className="text-black banner-background" id="page-top">
+                    <IntroductionVis/>
+                </section>
 
-            <section id="images" className="parallax">
-                <Images/>
-            </section>
+                <section id="images" className="parallax">
+                    <Images/>
+                </section>
 
-            <section id="welcomeinfo" className="text-grey">
-                <WelcomeInfo/>
-            </section>
+                <section id="welcomeinfo" className="text-grey">
+                    <WelcomeInfo/>
+                </section>
 
+                <section id="help" className="text-white parallax">
+                    <Help/>
+                </section>
 
-            <section id="help" className="text-white parallax">
-                <Help/>
-            </section>
+                <section id="privacy" className="bg-light">
+                    <Privacy/>
+                </section>
 
-            <section id="privacy" className="bg-light">
-                <Privacy/>
-            </section>
+                <section id="about-us" className="text-white parallax">
+                    <AboutUs/>
+                </section>
 
-            <section id="about-us" className="text-white parallax">
-                <AboutUs/>
-            </section>
-
-            <footer className="py-5 bg-dark">
-                <div className="container">
-                    <p className="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
-                </div>
-            </footer>
+                <footer className="py-5 bg-dark">
+                    <div className="container">
+                        <p className="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
+                    </div>
+                </footer>
+            </Suspense>
         </div>
     };
 }

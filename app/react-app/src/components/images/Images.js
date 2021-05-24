@@ -148,7 +148,7 @@ class Images extends React.Component {
 
                         <div className="btn-group mr-2">
                             <button className="btn btn-light btn-lg" id="enviar" onClick={this.handleSendGiradaToLuisa}>
-                                Imagen girada
+                                Reportar imagen girada
                             </button>
                         </div>
                     </div>)}

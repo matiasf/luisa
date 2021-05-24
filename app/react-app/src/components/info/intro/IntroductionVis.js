@@ -1,6 +1,8 @@
 import './introductino-vis.css';
+import { useTranslation } from 'react-i18next'
 
 function IntroductionVis() {
+    const { t } = useTranslation();
 
     return (
         <div className="text-right">
@@ -13,6 +15,7 @@ function IntroductionVis() {
                     <h1 className="alternate-font display-1 font-weight-bolder"><strong>Luisa</strong></h1>
                     <h3 className="alternate-font">Leyendo Unidos para</h3>
                     <h3 className="alternate-font">Interpretar loS Archivos</h3>
+                    {/*EXAMPLE TRANSLATION<p>{t('hello.label')}</p>*/}
                     <div>
                     </div>
                     <a className="btn btn-light js-scroll-trigger" href="#images">¡A las imágenes!</a>
