@@ -1,10 +1,10 @@
-function WelcomeInfo() {
+function WelcomeInfoEn() {
 
     return (
         <div className="container text-left">
             <h1 className="text-center alternate-font"><strong>LUISA</strong></h1>
 
-            <p className="lead">La aplicación LUISA en homenaje a <u><a className="text-dark"
+            <p className="lead">Luisa application<u><a className="text-dark"
                                                                         href="https://es.wikipedia.org/wiki/Luisa_Cuesta">Luisa
                 Cuesta</a></u>, es un esfuerzo colectivo para transcribir textos del período dictatorial y
                 pre dictatorial uruguayo que por diversas razones es difícil
@@ -100,4 +100,4 @@ function WelcomeInfo() {
 
 }
 
-export default WelcomeInfo;
+export default WelcomeInfoEn;

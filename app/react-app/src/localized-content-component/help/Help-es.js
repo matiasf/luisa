@@ -1,4 +1,4 @@
-function Help() {
+function HelpEn() {
 
     return (
         <div className="container">
@@ -62,4 +62,4 @@ function Help() {
 
 }
 
-export default Help;
+export default HelpEn;

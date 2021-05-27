@@ -2,7 +2,7 @@ function AboutUs() {
 
     return (
         <div className="container">
-            <h2>Quiénes Somos</h2>
+            <h2>How we are</h2>
 
             <p className="lead"> Abocamos docentes-investigadores y estudiantes de la <u><a
                 className="text-white"
