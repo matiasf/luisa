@@ -31,7 +31,7 @@ function AboutUs() {
                     <div className="card-header banner-background" id="headingOne">
                         <h5 className="mb-0">
                             <button className="btn btn-link text-dark collapsed"
-                                    data-toggle="collapse" data-target="#collapseOne" aria-expanded="false"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false"
                                     aria-controls="collapseOne">
                                 Facultad de Información y Comunicación (FIC)
                             </button>
@@ -57,7 +57,7 @@ function AboutUs() {
                     <div className="card-header banner-background" id="headingTwo">
                         <h5 className="mb-0">
                             <button className="btn btn-link  text-dark collapsed"
-                                    data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
                                     aria-controls="collapseTwo">
                                 Facultad de Ingeniería (FIng)
                             </button>
@@ -82,8 +82,8 @@ function AboutUs() {
                 <div className="card mb-4">
                     <div className="card-header banner-background" id="headingThree">
                         <h5 className="mb-0">
-                            <button className="btn btn-link  text-dark collapsed" data-toggle="collapse"
-                                    data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <button className="btn btn-link  text-dark collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                 Organizaciones Vinculadas
                             </button>
                         </h5>
@@ -112,8 +112,8 @@ function AboutUs() {
                 <div className="card mb-4">
                     <div className="card-header banner-background" id="headingFour">
                         <h5 className="mb-0">
-                            <button className="btn btn-link  text-dark collapsed" data-toggle="collapse"
-                                    data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            <button className="btn btn-link  text-dark collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                                 Recursos de Apoyo
                             </button>
                         </h5>

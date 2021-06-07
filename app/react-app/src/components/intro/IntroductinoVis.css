@@ -6,3 +6,10 @@
     background-color: rgb(239, 195, 74);
     padding-right: 5%;
 }
+
+@media (min-width: 992px) {
+    .banner-background {
+        padding-bottom: 0;
+    }
+}
+

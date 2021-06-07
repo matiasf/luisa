@@ -1,7 +1,7 @@
 function WelcomeInfoEn() {
 
     return (
-        <div className="container text-left">
+        <div className="container text-start">
             <h1 className="text-center alternate-font"><strong>LUISA</strong></h1>
 
             <p className="lead">Luisa application<u><a className="text-dark"
