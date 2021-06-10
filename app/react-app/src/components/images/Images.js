@@ -154,13 +154,13 @@ class Images extends React.Component {
                         </div>)}
                     {!this.state.loading && (
                         <div className="captcha-form-controls col-md-12 d-flex justify-content-center btn-toolbar">
-                            <div className="btn-group me-2">
+                            <div className="btn-group me-2 p-1">
                                 <button className="btn btn-light btn-lg" id="enviar" onClick={this.handleSendDataToLuisa}>
                                     {t('imagenes.enviar-datos')}
                                 </button>
                             </div>
 
-                            <div className="btn-group me-2">
+                            <div className="btn-group me-2 p-1">
                                 <button className="btn btn-light btn-lg" id="enviar" onClick={this.handleSendGiradaToLuisa}>
                                     {t('imagenes.reportar')}
                                 </button>
