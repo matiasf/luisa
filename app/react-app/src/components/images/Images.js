@@ -123,6 +123,9 @@ class Images extends React.Component {
                                             <img alt="imagen_documento" src={block.b64img}/>
                                             <hr/>
                                             <input className="form-control" id={block.idx} autoFocus={index === 0}
+                                                   autoCapitalize={false}
+                                                   autoCorrect={false}
+                                                   autoSave={false}
                                                    disabled={this.state.loading}
                                                    style={{
                                                        width: block.width + 'px',
