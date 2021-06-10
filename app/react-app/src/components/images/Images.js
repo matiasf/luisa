@@ -67,7 +67,14 @@ class Images extends React.Component {
         this.setState({loading: true});
         this.csvProcesarRequest(giro);
         Array.from(document.querySelectorAll('input')).forEach(
-            input => (input.value = '')
+            (input, index) => {
+                input.value = '';
+                console.debug('Clean');
+                if (index === 0) {
+                    console.debug('Autofocus');
+                    input.focus();
+                }
+            }
         );
         this.sendRef.current.scrollIntoView();
     }
