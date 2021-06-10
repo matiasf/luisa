@@ -111,9 +111,9 @@ class Images extends React.Component {
                         <div className="row border border-white rounded m-3 bg-secondary">
                             {this.state.blocks.filter(block => !block.context).map((block, index) => {
                                     return (
-                                        <div className="col-md-3 d-flex align-items-start flex-column my-2" key={block.idx}>
-                                            <img className="img-fluid" alt="imagen_documento"
-                                                 src={block.b64img}/>
+                                        <div className="col-md d-flex align-items-start flex-column my-2 overflow-auto"
+                                             key={block.idx}>
+                                            <img alt="imagen_documento" src={block.b64img}/>
                                             <hr/>
                                             <input className="form-control" id={block.idx} autoFocus={index === 0}
                                                    disabled={this.state.loading}
