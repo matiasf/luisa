@@ -4,13 +4,10 @@ function WelcomeInfoEn() {
         <div className="container text-start">
             <h1 className="text-center alternate-font"><strong>LUISA</strong></h1>
 
-            <p className="lead">La aplicación LUISA en homenaje a <u><a className="text-dark"
-                                                                        href="https://es.wikipedia.org/wiki/Luisa_Cuesta">Luisa
-                Cuesta</a></u>, es un esfuerzo colectivo para transcribir textos del período dictatorial y
-                pre dictatorial uruguayo que por diversas razones es difícil
-                transcribir de manera automática. El proyecto busca verdad y justicia sobre los actos de terrorismo de
-                Estado.
-            </p>
+         
+			<p className="lead">O aplicativo LUISA em homenagem a <u><a className="text-dark" href="https://es.wikipedia.org/wiki/Luisa_Cuesta">Luisa 
+			Cuesta</a></u>, é um esforço coletivo para transcrever textos do período ditatorial e pré ditatorial uruguaio, que por diversos motivos é difícil de transcrever de forma automática. O projeto busca verdade e justiça sobre os atos de terrorismo de Estado.
+			</p>
             <div className="row">
                 <div className="col-lg-3">
                     <svg viewBox="0 0 50 50" width="100%" height="130"
@@ -24,10 +21,8 @@ function WelcomeInfoEn() {
 
                     </svg>
 
-                    <h4 className="text-center">Recuperación de Archivos </h4>
-                    <p className="lead"> Se recuperaron archivos de varias fuentes donde se almacena información sobre
-                        la dictadura uruguaya incluyendo
-                        procedimientos represivos, fichas policiales, informes, etc.</p>
+                    <h4 className="text-center">Recuperação de Arquivos</h4>
+                    <p className="lead"> Foram recuperados arquivos de várias fontes onde se armazena informação sobre a ditadura uruguaia, incluindo procedimentos repressivos, fichas policiais, informes, etc.</p>
                 </div>
                 <div className="col-lg-3">
                     <svg viewBox="0 0 50 50" width="100%" height="130"
@@ -41,10 +36,8 @@ function WelcomeInfoEn() {
 
                     </svg>
 
-                    <h4 className="text-center">Transcripción de Imágenes</h4>
-                    <p className="lead">Pedimos que nos ayude transcribiendo fotos de documentos, de la cual le
-                        ofrecemos una porción que
-                        contiene texto, símbolos o números.
+                    <h4 className="text-center">Transcrição de Imagens</h4>
+                    <p className="lead">Pedimos que nos ajude a transcrever fotos de documentos, da qual lhe oferecemos uma parte que contém texto, símbolos ou números.
                     </p>
                 </div>
                 <div className="col-lg-3">
@@ -59,10 +52,8 @@ function WelcomeInfoEn() {
                         </svg>
 
                     </svg>
-                    <h4 className="text-center">Aplicación de Técnicas de Cruzamiento</h4>
-                    <p className="lead">Se utilizan
-                        técnicas de cruzamiento de información para procesar de manera automática y eficiente los
-                        contenidos de los documentos digitalizados.
+                    <h4 className="text-center">Aplicação de Técnicas de Cruzamento</h4>
+                    <p className="lead">Se utilizam técnicas de cruzamento de informações para processar de forma automática e eficiente os conteúdos dos documentos digitalizados
                     </p>
                 </div>
                 <div className="col-lg-3">
@@ -77,9 +68,8 @@ function WelcomeInfoEn() {
 
                     </svg>
 
-                    <h4 className="text-center">Análisis</h4>
-                    <p className="lead">Los documentos se categorizan y analizan para el mejor entendimiento del funcionamiento
-                        de la dictadura.</p>
+                    <h4 className="text-center">Análises</h4>
+                    <p className="lead">Os documentos são classificados e analisados para uma melhor compreensão sobre o funcionamento da ditadura.</p>
                 </div>
             </div>
             <p className="alternate-font text-center">
@@ -92,7 +82,7 @@ function WelcomeInfoEn() {
             </p>
 
             <div className="text-center">
-                <a className="btn btn-dark js-scroll-trigger" href="#images">¡A las imágenes!</a>
+                <a className="btn btn-dark js-scroll-trigger" href="#images">¡Para as imagens!</a>
             </div>
         </div>
 

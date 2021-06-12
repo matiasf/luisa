@@ -2,35 +2,35 @@ function HelpEn() {
 
     return (
         <div className="container">
-            <h2>Instrucciones para la Transcripción de Imágenes</h2>
+            <h2>Instruções para a Transcrição de Imagens</h2>
             <p className="lead">
-                Escriba el contenido de cada imagen en el recuadro usando su mejor criterio y el contexto de la imagen
-                completa.
+                Escreva o conteúdo de cada imagem no campo usando seu melhor critério e o contexto da imagem completa.
+
 
             </p>
             <div className="row">
                 <div className="col-6 lead">
-                    <h4>SÍ incluya los siguientes detalles: </h4>
+                    <h4>SIM, inclua os seguintes detalhes: </h4>
                     <div>
                         <ul>
-                            <li>Mayúsculas y minúsculas
+                            <li>Maiúsculas e minúsculas
                             </li>
-                            <li>Acentos, comas y demás símbolos
+                            <li>Acentos, vírgulas e demais símbolos
                             </li>
-                            <li>Antes de cada palabra ilegible, escriba un arroba (@)
+                            <li>Na frente de cada palavra ilegível, coloque arroba (@)
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div className="col-6 lead">
 
-                    <h4>NO incluya los siguientes detalles: </h4>
+                    <h4>NÃO inclua os seguintes detalhes:</h4>
                     <div>
                         <ul>
 
-                            <li>No incluir detalles que no son texto (manchas, firmas, o puntos de un formulario)
+                            <li>Não incluir detalhes que não são texto (manchas, assinaturas, ou pontos de um formulário)
                             </li>
-                            <li>No incluir formatos al texto (subrayado, en negrita, en itálica o manuscrito)
+                            <li>Não incluir formatos ao texto (sublinhado, em negrito, em itálico ou manuscrito)
                             </li>
                         </ul>
 
@@ -38,19 +38,17 @@ function HelpEn() {
                 </div>
             </div>
 
-            <h4>Sobre el uso del Teclado y Ratón</h4>
+            <h4>Sobre o uso do Teclado e Mouse</h4>
             <div className="lead">
                 <ul>
                     <li>
-                        Puede enviar con el botón de "Enviar Datos" o con la tecla "Enter".
+                        Pode enviar com o botão de "Enviar Dados" ou com a tecla "Enter".
                     </li>
                     <li>
-                        Si hay más de una linea en el bloque, use "Shift" y "Enter" simultáneamente para separar
-                        las líneas.
+                        Se houver mais de uma linha no bloco, use "Shift" e "Enter" simultaneamente para separar as linhas.
                     </li>
                     <li>
-                        Si la imagen es muy grande, use la barra de desplazamiento horizontal para ver la imagen
-                        completamente.
+                        Se a imagem for muito grande, use a barra de deslocamento horizontal para ver a imagem completa.
                     </li>
 
                 </ul>

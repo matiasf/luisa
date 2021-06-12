@@ -2,18 +2,9 @@ function Privacy() {
 
     return (
         <div className="container">
-            <h2>Compromiso de Privacidad</h2>
+            <h2>Compromisso de Privacidade</h2>
             <p className="lead">
-                Este sistema se encuentra en fase de prueba.
-                Durante esta fase utilizaremos cookies para distinguir las conexiones al sistema, pero no recabaremos
-                ningún
-                dato que permita reidentificar al dispositivo desde el cual se ingresó al sistema, asi como ningún dato
-                sobre el dispositivo o datos personal del usuario.
-                Esta información será empleada únicamente para análisis estadístico y para mejorar el desempeño del
-                sistema.
-                Usted puede eliminar las cookies en cualquier momento desde su dispositivo, le rogamos que no lo haga
-                durante la fase de prueba.
-                Una vez completada la misma se darán indicaciones adecuadas para eliminarlas.
+                Este sistema está em fase teste. Durante esta fase utilizamos cookies para distinguir as conexões ao sistema, porém não recolhemos nenhum dado que permita identificar o dispositivo de onde se entrou ao sistema, assim como nenhum dado sobre o dispositivo ou dados pessoais do usuário. Esta informação será utilizada apenas para análise estatística e para aprimorar o desempenho do sistema.Você pode eliminar cookies a qualquer momento do seu dispositivo. Solicitamos que não o faça durante a fase teste. Logo que finalizar a mesma, será orientado sobre como eliminá-los.
             </p>
         </div>
     );

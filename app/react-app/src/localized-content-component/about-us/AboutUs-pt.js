@@ -2,25 +2,16 @@ function AboutUs() {
 
     return (
         <div className="container">
-            <h2>How we are</h2>
+            <h2>Quem somos</h2>
 
-            <p className="lead"> Abocamos docentes-investigadores y estudiantes de la <u><a
-                className="text-white"
-                href="http://www.fiC.edu.uy">Facultad
-                de Información y Comunicación (FIC) </a></u>y de la <u><a className="text-white"
-                                                                          href="http://www.fing.edu.uy">Facultad de
-                Ingeniería (FIng)</a></u>, así como miembros de <u><a className="text-white" href="https://desaparecidos.org.uy/">Madres
-                y Familiares de Uruguayos Detenidos-Desaparecidos</a></u>.
-                Dichos grupos, a traves del desarrollo de estrategias y herramientas de procesiamiento de datos, buscamos divulgar
-                la informacion recabada.</p>
-            <p className="lead">En el marco del llamado 2017 a Proyectos de Extensión que emitió
-                la <u><a className="text-white"
-                         href="http://www.extension.udelar.edu.uy/">Comisión
-                    Sectorial de Extensión y Actividades con el Medio (CSEAM) </a></u>de la <u><a className="text-white"
-                                                                                                  href="http://www.universidad.edu.uy">Universidad
-                    de la República (UdelaR), </a></u>comenzó a funcionar este proyecto de sistematización,
-                tratamiento y difusión de la
-                información contenida en los documentos recuperados.</p>
+        
+				
+
+<p className="lead">Agrupamos docentes-investigadores e estudantes da <u><a className="text-white" href="http://www.fiC.edu.uy">Faculdade de Informação e Comunicação (FIC)</a></u> e da <u><a className="text-white" href="http://www.fing.edu.uy">Faculdade de Engenharia (FIng)</a></u>, assim como membros de <u><a className="text-white" href="https://desaparecidos.org.uy/">Mães e Familiares de Uruguaios Detidos/Desaparecidos</a></u>. Estes grupos, através do desenvolvimento de estratégias e ferramentas de processamento de dados, buscam divulgar a informação recebida.</p>
+
+
+<p className="lead">No âmbito da chamada 2017 para Projetos de Extensão emitida pela <u><a className="text-white" href="http://www.extension.udelar.edu.uy/">Comissão Setorial de Extensão e Atividades com o Meio (CSEAM)</a></u> da <u><a className="text-white" href="http://www.universidad.edu.uy">Universidade da República (UdelaR)</a></u>, começou a funcionar este projeto de sistematização, tratamento e difusão da informação dos documentos recuperados.</p>
+
 
             <br/>
             <br/>
@@ -33,7 +24,7 @@ function AboutUs() {
                             <button className="btn btn-link text-dark collapsed"
                                     data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false"
                                     aria-controls="collapseOne">
-                                Facultad de Información y Comunicación (FIC)
+                                Faculdade de Informação e Comunicação (FIC)
                             </button>
                         </h5>
 
@@ -41,14 +32,14 @@ function AboutUs() {
                     <div id="collapseOne" className="collapse show rgba-black-light white-text lead" aria-labelledby="headingOne"
                          data-parent="#accordion">
                         <div className="card-body parallax">
-                            <b>Sección Periodismo:</b>
+                            <b>Seção Jornalismo:</b>
                             <ul>
-                                <li>Profesor Adjunto Samuel Blixen</li>
-                                <li>Asistente Betania Núñez</li>
+                                <li>Professor Adjunto Samuel Blixen</li>
+                                <li>Assistente Betania Núñez</li>
                             </ul>
-                            <b>Departamento de Fuentes Documentales, Recursos y Servicios:</b>
+                            <b>Departamento de Fontes Documentais, Recursos e Serviços:</b>
                             <ul>
-                                <li>Profesor Adjunto Fabián Hernández Muñiz</li>
+                                <li>Professor Adjunto Fabián Hernández Muñiz</li>
                             </ul>
                         </div>
                     </div>
@@ -59,22 +50,22 @@ function AboutUs() {
                             <button className="btn btn-link  text-dark collapsed"
                                     data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
                                     aria-controls="collapseTwo">
-                                Facultad de Ingeniería (FIng)
+                                Faculdade de Engenharia (FIng)
                             </button>
                         </h5>
                     </div>
                     <div id="collapseTwo" className="collapse lead" aria-labelledby="headingTwo" data-parent="#accordion">
                         <div className="card-body parallax">
-                            <b>Instituto de Computación:</b>
+                            <b>Instituto de Computação:</b>
                             <ul>
-                                <li>Profesor Emérito Juan José Cabezas</li>
-                                <li>Profesor Adjunto Fernando Carpani</li>
-                                <li>Profesora Adjunta Lorena Etcheverry</li>
+                                <li>Professor Emérito Juan José Cabezas</li>
+                                <li>Professor Adjunto Fernando Carpani</li>
+                                <li>Professora Adjunta Lorena Etcheverry</li>
                             </ul>
-                            <b>Instituto de Ingeniería Eléctrica:</b>
+                            <b>Instituto de Engenharia Elétrica:</b>
                             <ul>
-                                <li>Profesor Titular Gregory Randall</li>
-                                <li>Profesor Adjunto Ignacio Ramírez (Coordinador del equipo)</li>
+                                <li>Professor Titular Gregory Randall</li>
+                                <li>Professor Adjunto Ignacio Ramírez (Coordenador da equipe)</li>
                             </ul>
                         </div>
                     </div>
@@ -84,27 +75,16 @@ function AboutUs() {
                         <h5 className="mb-0">
                             <button className="btn btn-link  text-dark collapsed" data-bs-toggle="collapse"
                                     data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                Organizaciones Vinculadas
+                                Organizações Vinculadas
                             </button>
                         </h5>
                     </div>
                     <div id="collapseThree" className="collapse lead" aria-labelledby="headingThree" data-parent="#accordion">
                         <div className="card-body parallax">
-                            <p><b>Madres y Familiares de Uruguayos Detenidos-Desaparecidos</b></p>
-                            <p>Un grupo de madres y familiares de uruguayos detenidos desaparecidos que
-                                desde los años ´70 empezaron a juntarse para buscarlos, aún con la esperanza de
-                                encontrarlos vivos. Desde la apertura democrática caminan juntos respetando
-                                la diversidad de pensamientos que los caracteriza pero unidos en torno a sus principales
-                                objetivos: Verdad, justicia, memoria y nunca más.</p>
-                            <p><b>Grupo de Trabajo por Verdad y Justicia</b></p>
-                            <p>Desde el momento de su creación el 19 de
-                                mayo de 2015 el Grupo de Trabajo por Verdad y Justicia investiga los crímenes de lesa humanidad
-                                cometidos por agentes del Estado o contando con su complicidad, durante el
-                                período de actuación ilegal o en su fase terrorista.
-                                El Grupo se constituyó para contribuir en dar luz a tan graves hechos en
-                                pos de la verdad histórica y promover la justicia en el marco del Estado de
-                                Derecho sobre la base de estándares internacionales de Verdad, Justicia,
-                                Memoria y Garantías de No Repetición.
+                            <p><b>Mães e Familiares de Uruguaios Detidos/Desaparecidos</b></p>
+                            <p>Um grupo de mães e familiares de uruguaios detidos/desaparecidos que desde os anos ´70 se uniu para buscá-los, ainda com a esperança de encontrá-los vivos. Desde a abertura democrática caminham juntos, respeitando a diversidade de pensamento que os caracteriza porém unidos por seus principais objetivos: Verdade, Justiça, Memória e Nunca Mais.</p>
+                            <p><b>Grupo de Trabalho por Verdade e Justiça</b></p>
+                            <p>Desde o momento de sua criação, no dia 19 de maio de 2015, o Grupo de Trabalho por Verdade e Justiça investiga os crimes de lesa-humanidade cometidos por agentes do Estado ou contando com sua cumplicidade, durante o período de atuação ilegal ou em sua fase terrorista. O Grupo se constituiu para contribuir com a missão de trazer à tona fatos tão graves em prol da verdade histórica e promover a justiça no âmbito do Estado de Direito sobre a base de parâmetros de Verdade, Justiça, Memória e Garantias de Não Repetição
                             </p>
                         </div>
                     </div>
@@ -114,24 +94,15 @@ function AboutUs() {
                         <h5 className="mb-0">
                             <button className="btn btn-link  text-dark collapsed" data-bs-toggle="collapse"
                                     data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                Recursos de Apoyo
+                                Recursos de Apoio
                             </button>
                         </h5>
                     </div>
                     <div id="collapseFour" className="collapse lead" aria-labelledby="headingFour" data-parent="#accordion">
                         <div className="card-body parallax">
-                            <p>Las tres millones de imágenes con las que cuenta el Proyecto LUISA provienen de una variedad de
-                                fuentes incluyendo
-                                los documentos del Cuerpo de Fusileros Navales y el Archivo Histórico de la ex Dirección Nacional
-                                de Información e
-                                Inteligencia.
-                                También se suma a este proceso aquella documentación a la que se acceda a instancias del
-                                Grupo de Trabajo por Verdad y Justicia y en el marco de las acciones de investigación e
-                                intervención en los distintos archivos públicos.</p>
-                            <p><b>Archivo Berrutti</b></p>
-                            <p> Miles de archivos microfilmados que fueron encontrados en el Ministerio de Defensa, en la casa del
-                                coronel Castiglioni, y en la ex Escuela de Inteligencia del Ejército. Se recolectaron durante la
-                                gestión de la ministra Azucena Berrutti.
+                            <p>As três milhões de imagens com as que o Projeto LUISA conta provém de uma variedade de fontes, incluindo os documentos do Corpo de Fuzileiros Navais e o Arquivo Histórico da ex Direção Nacional de Informação e Inteligência. Também se soma a este processo a documentação que se acessa em instâncias do Grupo de Trabalho por Verdade e Justiça e no âmbito das ações de investigação e intervenção nos diversos arquivos públicos. </p>
+                            <p><b>Arquivo Berrutti</b></p>
+                            <p>Milhares de arquivos microfilmados foram encontrados no Ministério da Defesa, na casa do coronel Castiglioni, e na ex-Escola de Inteligência do Exército. Se juntaram durante a gestão da ministra Azucena Berrutti.
                             </p>
                         </div>
                     </div>
