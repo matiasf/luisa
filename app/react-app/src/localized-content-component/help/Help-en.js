@@ -2,35 +2,34 @@ function HelpEn() {
 
     return (
         <div className="container">
-            <h2>Instructions for tnrascrption of images</h2>
+            <h2>Instructions for Transcribing the Images</h2>
             <p className="lead">
-                Escriba el contenido de cada imagen en el recuadro usando su mejor criterio y el contexto de la imagen
-                completa.
+                Type the content of each image in the box using your best judgement and the context provided by the image showing the complete text.
 
             </p>
             <div className="row">
                 <div className="col-6 lead">
-                    <h4>SÍ incluya los siguientes detalles: </h4>
+                    <h4>DO include the following details: </h4>
                     <div>
                         <ul>
-                            <li>Mayúsculas y minúsculas
+                            <li>Case specific
                             </li>
-                            <li>Acentos, comas y demás símbolos
+                            <li>Accents, commas, and other symbols
                             </li>
-                            <li>Antes de cada palabra ilegible, escriba un arroba (@)
+                            <li>Before each illegible word, type the @ symbol
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div className="col-6 lead">
 
-                    <h4>NO incluya los siguientes detalles: </h4>
+                    <h4>DO NOT include the following details: </h4>
                     <div>
                         <ul>
 
-                            <li>No incluir detalles que no son texto (manchas, firmas, o puntos de un formulario)
+                            <li>Do not include non-text details (blotches and stains, signatures, o form items)
                             </li>
-                            <li>No incluir formatos al texto (subrayado, en negrita, en itálica o manuscrito)
+                            <li>Do not include text formats (underlines, bold, italics, or manuscript)
                             </li>
                         </ul>
 
@@ -38,19 +37,17 @@ function HelpEn() {
                 </div>
             </div>
 
-            <h4>Sobre el uso del Teclado y Ratón</h4>
+            <h4>Regarding Keyboard and Mouse Usage</h4>
             <div className="lead">
                 <ul>
                     <li>
-                        Puede enviar con el botón de "Enviar Datos" o con la tecla "Enter".
+                        Save and store complete work by clicking the "Send Data" button or using the "Enter" key.
                     </li>
                     <li>
-                        Si hay más de una linea en el bloque, use "Shift" y "Enter" simultáneamente para separar
-                        las líneas.
+                        If there is more than one line in the text block, use "Shift" and "Enter" simultaneously to separate the lines.
                     </li>
                     <li>
-                        Si la imagen es muy grande, use la barra de desplazamiento horizontal para ver la imagen
-                        completamente.
+                        If the image is too large, use the horizontal scroll bar so view the full image.
                     </li>
 
                 </ul>
