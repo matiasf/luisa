@@ -4,12 +4,11 @@ function WelcomeInfoEn() {
         <div className="container text-start">
             <h1 className="text-center alternate-font"><strong>LUISA</strong></h1>
 
-            <p className="lead">Luisa application<u><a className="text-dark"
+            <p className="lead">The Luisa application, in homage to <u><a className="text-dark"
                                                                         href="https://es.wikipedia.org/wiki/Luisa_Cuesta">Luisa
-                Cuesta</a></u>, es un esfuerzo colectivo para transcribir textos del período dictatorial y
-                pre dictatorial uruguayo que por diversas razones es difícil
-                transcribir de manera automática. El proyecto busca verdad y justicia sobre los actos de terrorismo de
-                Estado.
+                Cuesta</a></u>, is a collaborative project with the objective of transcribing texts from the period previous to, and during the 
+				Uruguayan dictatorship, which for several reasons may be difficult to transcribe automatically. The project seeks to contribute to 
+				the search for truth and justice regarding the acts of State terrorism.
             </p>
             <div className="row">
                 <div className="col-lg-3">
@@ -24,10 +23,9 @@ function WelcomeInfoEn() {
 
                     </svg>
 
-                    <h4 className="text-center">Recuperación de Archivos </h4>
-                    <p className="lead"> Se recuperaron archivos de varias fuentes donde se almacena información sobre
-                        la dictadura uruguaya incluyendo
-                        procedimientos represivos, fichas policiales, informes, etc.</p>
+                    <h4 className="text-center">Archive Recovery</h4>
+                    <p className="lead"> Retrieval from several sources of documents that store information about the Uruguayan
+                        dictatorship including repressive regimes, police files, reportes, etc.</p>
                 </div>
                 <div className="col-lg-3">
                     <svg viewBox="0 0 50 50" width="100%" height="130"
@@ -41,10 +39,9 @@ function WelcomeInfoEn() {
 
                     </svg>
 
-                    <h4 className="text-center">Transcripción de Imágenes</h4>
-                    <p className="lead">Pedimos que nos ayude transcribiendo fotos de documentos, de la cual le
-                        ofrecemos una porción que
-                        contiene texto, símbolos o números.
+                    <h4 className="text-center">Image Transcription</h4>
+                    <p className="lead">We ask volunteers to transcribe pictures of documents, of which we provide a portion of the text,
+						symbols or numbers.
                     </p>
                 </div>
                 <div className="col-lg-3">
@@ -77,14 +74,14 @@ function WelcomeInfoEn() {
 
                     </svg>
 
-                    <h4 className="text-center">Análisis</h4>
-                    <p className="lead">Los documentos se categorizan y analizan para el mejor entendimiento del funcionamiento
-                        de la dictadura.</p>
+                    <h4 className="text-center">Analysis</h4>
+                    <p className="lead">The documents are categorized and analyzed to better understand the structure and operation
+					of the dictatorship.</p>
                 </div>
             </div>
             <p className="alternate-font text-center">
                 <i><a className="text-dark" href="mailto:cruzar@fic.edu.uy?subject=Luisa: ">
-                    contacto
+                    contact
                 </a>{' / '}
                     <a className="text-dark" href="https://www.instagram.com/proyecto.luisa/?hl=es-la" target="_blank">
                         instagram
@@ -92,7 +89,7 @@ function WelcomeInfoEn() {
             </p>
 
             <div className="text-center">
-                <a className="btn btn-dark js-scroll-trigger" href="#images">¡A las imágenes!</a>
+                <a className="btn btn-dark js-scroll-trigger" href="#images">To the images!</a>
             </div>
         </div>
 
