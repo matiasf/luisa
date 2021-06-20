@@ -9,7 +9,7 @@ function AboutUs() {
                 href="http://www.fiC.edu.uy">College of Communication (FIC)</a></u>and the <u><a className="text-white"
                                                                           href="http://www.fing.edu.uy">Engineering College</a></u>, as well as members of the organization of <u><a className="text-white" href="https://desaparecidos.org.uy/">Mothers
                 and Families of Detained-Disappeared Uruguayans</a></u>.
-                These groups collaborate to collect and process documents to make accesible the information collected to the public.</p>
+                These groups collaborate to collect and process documents to make the information collected accesible to the public.</p>
             <p className="lead">In 2017, the <u><a className="text-white"
                                                                                                   href="http://www.universidad.edu.uy">University of the Republic's (UdelaR), </a></u>
 																								  <u><a className="text-white"
@@ -61,7 +61,7 @@ function AboutUs() {
                             <b>Computer Science Institute:</b>
                             <ul>
                                 <li>Professor Emeritus Juan José Cabezas</li>
-                                <li>Adjunct Profesosr Fernando Carpani</li>
+                                <li>Adjunct Professor Fernando Carpani</li>
                                 <li>Adjunct Professor Lorena Etcheverry</li>
                             </ul>
                             <b>Electrical Engineering Institute:</b>
@@ -84,11 +84,10 @@ function AboutUs() {
                     <div id="collapseThree" className="collapse lead" aria-labelledby="headingThree" data-parent="#accordion">
                         <div className="card-body parallax">
                             <p><b>Mothers and Families of Detained-Disappeared Uruguayans</b></p>
-                            <p>Un grupo de madres y familiares de uruguayos detenidos desaparecidos que
-                                desde los años ´70 empezaron a juntarse para buscarlos, aún con la esperanza de
-                                encontrarlos vivos. Desde la apertura democrática caminan juntos respetando
-                                la diversidad de pensamientos que los caracteriza pero unidos en torno a sus principales
-                                objetivos: Verdad, justicia, memoria y nunca más.</p>
+                            <p>A group of mothers and family members of Uruguayans detained and/or disappeared who came together in 
+							the 70’s to look for them, still hoping to find them alive. Since the democratic awakening, they walk together, 
+							respecting the diversity of thought that defines them but united under their principal objectives: truth, justice, 
+							memory, and the guarantee of non-repetition.</p>
                             <p><b>Working Group for Truth and Justice</b></p>
                             <p>From its founding on May 19, 2015 the Working Group for Truth and Justice has been dedicated to the investigation 
 								of human rights abuses in which State agents activley participated, or were complicit. The Working Group's objective 

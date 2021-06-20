@@ -6,7 +6,7 @@ function WelcomeInfoEn() {
 
             <p className="lead">The Luisa application, in homage to <u><a className="text-dark"
                                                                         href="https://es.wikipedia.org/wiki/Luisa_Cuesta">Luisa
-                Cuesta</a></u>, is a collaborative project with the objective of transcribing texts from the period previous to, and during the 
+                Cuesta</a></u>, is a collaborative project with the objective of transcribing texts from the period prior to, and during, the 
 				Uruguayan dictatorship, which for several reasons may be difficult to transcribe automatically. The project seeks to contribute to 
 				the search for truth and justice regarding the acts of State terrorism.
             </p>
@@ -24,8 +24,8 @@ function WelcomeInfoEn() {
                     </svg>
 
                     <h4 className="text-center">Archive Recovery</h4>
-                    <p className="lead"> Retrieval from several sources of documents that store information about the Uruguayan
-                        dictatorship including repressive regimes, police files, reportes, etc.</p>
+                    <p className="lead"> We retrieve documents from several sources that store information about the Uruguayan
+                        dictatorship including repressive regimes, police files, reports, etc.</p>
                 </div>
                 <div className="col-lg-3">
                     <svg viewBox="0 0 50 50" width="100%" height="130"
@@ -56,10 +56,8 @@ function WelcomeInfoEn() {
                         </svg>
 
                     </svg>
-                    <h4 className="text-center">Aplicación de Técnicas de Cruzamiento</h4>
-                    <p className="lead">Se utilizan
-                        técnicas de cruzamiento de información para procesar de manera automática y eficiente los
-                        contenidos de los documentos digitalizados.
+                    <h4 className="text-center">Application de Merging Techniques</h4>
+                    <p className="lead">We use merging techniques to automatically and efficiently process the contents of the digitized documents.
                     </p>
                 </div>
                 <div className="col-lg-3">

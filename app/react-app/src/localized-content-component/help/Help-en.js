@@ -12,7 +12,7 @@ function HelpEn() {
                     <h4>DO include the following details: </h4>
                     <div>
                         <ul>
-                            <li>Case specific
+                            <li>Uppercase and lowercase letters
                             </li>
                             <li>Accents, commas, and other symbols
                             </li>
@@ -27,9 +27,9 @@ function HelpEn() {
                     <div>
                         <ul>
 
-                            <li>Do not include non-text details (blotches and stains, signatures, o form items)
+                            <li>Do not include non-text details (blotches and stains, signatures, or bullet points)
                             </li>
-                            <li>Do not include text formats (underlines, bold, italics, or manuscript)
+                            <li>Do not include text formats (underlines, bold, italics, or fonts)
                             </li>
                         </ul>
 
@@ -47,7 +47,7 @@ function HelpEn() {
                         If there is more than one line in the text block, use "Shift" and "Enter" simultaneously to separate the lines.
                     </li>
                     <li>
-                        If the image is too large, use the horizontal scroll bar so view the full image.
+                        If the image is too large, use the horizontal scroll bar to view the full image.
                     </li>
 
                 </ul>

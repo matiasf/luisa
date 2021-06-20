@@ -4,7 +4,7 @@ function Privacy() {
         <div className="container">
             <h2>Privacy Agreement</h2>
             <p className="lead">
-                This sistem is currently in a testing phase.
+                This system is currently in a testing phase.
                 During this phase the system will be using cookies to distinguish unique connections to the system, 
 				but no personal or identifying data will be stored from the device used to access the system.
                 This information will be used solely for statistical analysis and to improve the functionality 
