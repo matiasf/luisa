@@ -63,8 +63,3 @@ Esto será invocando por AJAX, ver `Images.js`
 En caso de querer invocar LUISA contra el backend implementado en CSV (sandbox), colocar el valor CSV.\
 Por el contrario, si se quiere invocar LUISA contra el backend actual implementado en python con HTML, colocar el valor HTML.
 
-### `PUBLIC_URL`
-
-En caso de ser necesario cambiar la URL base del sitio para obtener archivos estáticos, agregar el prefijo en esta variable.
-Un caso de uso es el deploy a testing que incluye un prefijo en la URL.
-Valor de ejemplo `PUBLIC_URL=/mh/dev`
