@@ -2,7 +2,7 @@ function AboutUs() {
 
     return (
         <div className="container">
-            <h2>Who we are</h2>
+            <h2>About us</h2>
 
             <p className="lead"> We are professors, researchers, and students from the <u><a
                 className="text-white"
@@ -77,7 +77,7 @@ function AboutUs() {
                         <h5 className="mb-0">
                             <button className="btn btn-link  text-dark collapsed" data-bs-toggle="collapse"
                                     data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                Organizaciones Vinculadas
+                                Partnering Organizations
                             </button>
                         </h5>
                     </div>
