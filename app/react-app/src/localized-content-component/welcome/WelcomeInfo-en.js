@@ -56,7 +56,7 @@ function WelcomeInfoEn() {
                         </svg>
 
                     </svg>
-                    <h4 className="text-center">Application de Merging Techniques</h4>
+                    <h4 className="text-center">Application of Merging Techniques</h4>
                     <p className="lead">We use merging techniques to automatically and efficiently process the contents of the digitized documents.
                     </p>
                 </div>
