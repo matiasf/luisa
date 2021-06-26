@@ -7,14 +7,19 @@ function AboutUs() {
             <p className="lead"> We are professors, researchers, and students from the <u><a
                 className="text-white"
                 href="http://www.fiC.edu.uy">College of Communication (FIC)</a></u>and the <u><a className="text-white"
-                                                                          href="http://www.fing.edu.uy">Engineering College</a></u>, as well as members of the organization of <u><a className="text-white" href="https://desaparecidos.org.uy/">Mothers
+                                                                                                 href="http://www.fing.edu.uy">Engineering
+                College</a></u>, as well as members of the organization of <u><a className="text-white"
+                                                                                 href="https://desaparecidos.org.uy/">Mothers
                 and Families of Detained-Disappeared Uruguayans</a></u>.
-                These groups collaborate to collect and process documents to make the information collected accesible to the public.</p>
+                These groups collaborate to collect and process documents to make the information collected accesible to the
+                public.</p>
             <p className="lead">In 2017, the <u><a className="text-white"
-                                                                                                  href="http://www.universidad.edu.uy">University of the Republic's (UdelaR), </a></u>
-																								  <u><a className="text-white"
-                         href="http://www.extension.udelar.edu.uy/">Sectorial Commission on Extension and Activities in Media (CSEAM)</a></u> proposed an Extension Project
-						to collect, process, and publicize the information contained in the unearthed documents.</p>
+                                                   href="http://www.universidad.edu.uy">University of the Republic's
+                (UdelaR), </a></u>
+                <u><a className="text-white"
+                      href="http://www.extension.udelar.edu.uy/">Sectorial Commission on Extension and Activities in Media
+                    (CSEAM)</a></u> proposed an Extension Project
+                to collect, process, and publicize the information contained in the unearthed documents.</p>
             <br/>
             <br/>
 
@@ -84,15 +89,21 @@ function AboutUs() {
                     <div id="collapseThree" className="collapse lead" aria-labelledby="headingThree" data-parent="#accordion">
                         <div className="card-body parallax">
                             <p><b>Mothers and Families of Detained-Disappeared Uruguayans</b></p>
-                            <p>A group of mothers and family members of Uruguayans detained and/or disappeared who came together in 
-							the 70’s to look for them, still hoping to find them alive. Since the democratic awakening, they walk together, 
-							respecting the diversity of thought that defines them but united under their principal objectives: truth, justice, 
-							memory, and the guarantee of non-repetition.</p>
+                            <p>A group of mothers and family members of Uruguayans detained and/or disappeared who came together
+                                in
+                                the 70’s to look for them, still hoping to find them alive. Since the democratic awakening, they
+                                walk together,
+                                respecting the diversity of thought that defines them but united under their principal objectives:
+                                truth, justice,
+                                memory, and the guarantee of non-repetition.</p>
                             <p><b>Working Group for Truth and Justice</b></p>
-                            <p>From its founding on May 19, 2015 the Working Group for Truth and Justice has been dedicated to the investigation 
-								of human rights abuses in which State agents activley participated, or were complicit. The Working Group's objective 
-								is to shed light on these illegal acts of State terrorism and promote international standards of Truth, Justice,
-								Memory, and the Guarantee of Non Repetition.
+                            <p>From its founding on May 19, 2015 the Working Group for Truth and Justice has been dedicated to the
+                                investigation
+                                of human rights abuses in which State agents activley participated, or were complicit. The Working
+                                Group's objective
+                                is to shed light on these illegal acts of State terrorism and promote international standards of
+                                Truth, Justice,
+                                Memory, and the Guarantee of Non Repetition.
                             </p>
                         </div>
                     </div>
@@ -108,14 +119,18 @@ function AboutUs() {
                     </div>
                     <div id="collapseFour" className="collapse lead" aria-labelledby="headingFour" data-parent="#accordion">
                         <div className="card-body parallax">
-                            <p>The LUISA Project relies on three million images from several sources including documents from the Naval Rifle Corps
-								and the National Office of Information and Intelligence's Historical Archive.
-                                The Project also has access to documentation recovered by the Working Group for Truth and Justice as a result of their                               Grupo de Trabajo por Verdad y Justicia y en el marco de las acciones de investigación e
+                            <p>The LUISA Project relies on three million images from several sources including documents from the
+                                Naval Rifle Corps
+                                and the National Office of Information and Intelligence's Historical Archive.
+                                The Project also has access to documentation recovered by the Working Group for Truth and Justice
+                                as a result of their Grupo de Trabajo por Verdad y Justicia y en el marco de las acciones de
+                                investigación e
                                 interventions in several public archives.</p>
                             <p><b>Berrutti Archive</b></p>
-                            <p> Thousands of microfilmed files were found in the Department of Defense, in the home of 
-                                colonel Castiglioni, and in the Military's former Inteligence School. These documents were retrieved
-								during the leadership of Secretary Azucena Berrutti.
+                            <p> Thousands of microfilmed files were found in the Department of Defense, in the home of
+                                colonel Castiglioni, and in the Military's former Inteligence School. These documents were
+                                retrieved
+                                during the leadership of Secretary Azucena Berrutti.
                             </p>
                         </div>
                     </div>

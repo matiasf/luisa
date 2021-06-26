@@ -4,10 +4,13 @@ function WelcomeInfoEn() {
         <div className="container text-start">
             <h1 className="text-center alternate-font"><strong>LUISA</strong></h1>
 
-         
-			<p className="lead">O aplicativo LUISA em homenagem a <u><a className="text-dark" href="https://es.wikipedia.org/wiki/Luisa_Cuesta">Luisa 
-			Cuesta</a></u>, é um esforço coletivo para transcrever textos do período ditatorial e pré ditatorial uruguaio, que por diversos motivos é difícil de transcrever de forma automática. O projeto busca verdade e justiça sobre os atos de terrorismo de Estado.
-			</p>
+
+            <p className="lead">O aplicativo LUISA em homenagem a <u><a className="text-dark"
+                                                                        href="https://es.wikipedia.org/wiki/Luisa_Cuesta">Luisa
+                Cuesta</a></u>, é um esforço coletivo para transcrever textos do período ditatorial e pré ditatorial uruguaio, que
+                por diversos motivos é difícil de transcrever de forma automática. O projeto busca verdade e justiça sobre os atos
+                de terrorismo de Estado.
+            </p>
             <div className="row">
                 <div className="col-lg-3">
                     <svg viewBox="0 0 50 50" width="100%" height="130"
@@ -22,7 +25,8 @@ function WelcomeInfoEn() {
                     </svg>
 
                     <h4 className="text-center">Recuperação de Arquivos</h4>
-                    <p className="lead"> Foram recuperados arquivos de várias fontes onde se armazena informação sobre a ditadura uruguaia, incluindo procedimentos repressivos, fichas policiais, informes, etc.</p>
+                    <p className="lead"> Foram recuperados arquivos de várias fontes onde se armazena informação sobre a ditadura
+                        uruguaia, incluindo procedimentos repressivos, fichas policiais, informes, etc.</p>
                 </div>
                 <div className="col-lg-3">
                     <svg viewBox="0 0 50 50" width="100%" height="130"
@@ -37,7 +41,8 @@ function WelcomeInfoEn() {
                     </svg>
 
                     <h4 className="text-center">Transcrição de Imagens</h4>
-                    <p className="lead">Pedimos que nos ajude a transcrever fotos de documentos, da qual lhe oferecemos uma parte que contém texto, símbolos ou números.
+                    <p className="lead">Pedimos que nos ajude a transcrever fotos de documentos, da qual lhe oferecemos uma parte
+                        que contém texto, símbolos ou números.
                     </p>
                 </div>
                 <div className="col-lg-3">
@@ -53,7 +58,8 @@ function WelcomeInfoEn() {
 
                     </svg>
                     <h4 className="text-center">Aplicação de Técnicas de Cruzamento</h4>
-                    <p className="lead">Se utilizam técnicas de cruzamento de informações para processar de forma automática e eficiente os conteúdos dos documentos digitalizados
+                    <p className="lead">Se utilizam técnicas de cruzamento de informações para processar de forma automática e
+                        eficiente os conteúdos dos documentos digitalizados
                     </p>
                 </div>
                 <div className="col-lg-3">
@@ -69,14 +75,15 @@ function WelcomeInfoEn() {
                     </svg>
 
                     <h4 className="text-center">Análises</h4>
-                    <p className="lead">Os documentos são classificados e analisados para uma melhor compreensão sobre o funcionamento da ditadura.</p>
+                    <p className="lead">Os documentos são classificados e analisados para uma melhor compreensão sobre o
+                        funcionamento da ditadura.</p>
                 </div>
             </div>
             <p className="alternate-font text-center">
                 <i><a className="text-dark" href="mailto:cruzar@fic.edu.uy?subject=Luisa: ">
                     contacto
                 </a>{' / '}
-                    <a className="text-dark" href="https://www.instagram.com/proyecto.luisa/?hl=es-la" target="_blank">
+                    <a className="text-dark" href="https://www.instagram.com/proyecto.luisa/?hl=es-la" target="_blank" rel="noreferrer">
                         instagram
                     </a></i>
             </p>

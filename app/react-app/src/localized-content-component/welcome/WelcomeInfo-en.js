@@ -5,10 +5,12 @@ function WelcomeInfoEn() {
             <h1 className="text-center alternate-font"><strong>LUISA</strong></h1>
 
             <p className="lead">The Luisa application, in homage to <u><a className="text-dark"
-                                                                        href="https://es.wikipedia.org/wiki/Luisa_Cuesta">Luisa
-                Cuesta</a></u>, is a collaborative project with the objective of transcribing texts from the period prior to, and during, the 
-				Uruguayan dictatorship, which for several reasons may be difficult to transcribe automatically. The project seeks to contribute to 
-				the search for truth and justice regarding the acts of State terrorism.
+                                                                          href="https://es.wikipedia.org/wiki/Luisa_Cuesta">Luisa
+                Cuesta</a></u>, is a collaborative project with the objective of transcribing texts from the period prior to, and
+                during, the
+                Uruguayan dictatorship, which for several reasons may be difficult to transcribe automatically. The project seeks
+                to contribute to
+                the search for truth and justice regarding the acts of State terrorism.
             </p>
             <div className="row">
                 <div className="col-lg-3">
@@ -40,8 +42,9 @@ function WelcomeInfoEn() {
                     </svg>
 
                     <h4 className="text-center">Image Transcription</h4>
-                    <p className="lead">We ask volunteers to transcribe pictures of documents, of which we provide a portion of the text,
-						symbols or numbers.
+                    <p className="lead">We ask volunteers to transcribe pictures of documents, of which we provide a portion of
+                        the text,
+                        symbols or numbers.
                     </p>
                 </div>
                 <div className="col-lg-3">
@@ -57,7 +60,8 @@ function WelcomeInfoEn() {
 
                     </svg>
                     <h4 className="text-center">Application of Merging Techniques</h4>
-                    <p className="lead">We use merging techniques to automatically and efficiently process the contents of the digitized documents.
+                    <p className="lead">We use merging techniques to automatically and efficiently process the contents of the
+                        digitized documents.
                     </p>
                 </div>
                 <div className="col-lg-3">
@@ -73,15 +77,16 @@ function WelcomeInfoEn() {
                     </svg>
 
                     <h4 className="text-center">Analysis</h4>
-                    <p className="lead">The documents are categorized and analyzed to better understand the structure and operation
-					of the dictatorship.</p>
+                    <p className="lead">The documents are categorized and analyzed to better understand the structure and
+                        operation
+                        of the dictatorship.</p>
                 </div>
             </div>
             <p className="alternate-font text-center">
                 <i><a className="text-dark" href="mailto:cruzar@fic.edu.uy?subject=Luisa: ">
                     contact
                 </a>{' / '}
-                    <a className="text-dark" href="https://www.instagram.com/proyecto.luisa/?hl=es-la" target="_blank">
+                    <a className="text-dark" href="https://www.instagram.com/proyecto.luisa/?hl=es-la" target="_blank" rel="noreferrer">
                         instagram
                     </a></i>
             </p>

@@ -79,8 +79,8 @@ class App extends React.Component {
                                     <a className="nav-link js-scroll-trigger" href="#about-us">{t('menu.quienes-somos')}</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link js-scroll-trigger" href="https://cruzar.uy/"
-                                       target="_blank"><strong>{t('cruzar')}</strong></a>
+                                    <a className="nav-link js-scroll-trigger" href="https://cruzar.uy/" target="_blank"
+                                       rel="noreferrer"><strong>{t('cruzar')}</strong></a>
                                 </li>
                                 <li className="nav-item dropdown">
                                     <a className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button"
