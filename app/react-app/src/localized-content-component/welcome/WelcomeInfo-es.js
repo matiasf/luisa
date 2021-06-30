@@ -1,4 +1,4 @@
-function WelcomeInfoEn() {
+function WelcomeInfoEs() {
 
     return (
         <div className="container text-start">
@@ -100,4 +100,4 @@ function WelcomeInfoEn() {
 
 }
 
-export default WelcomeInfoEn;
+export default WelcomeInfoEs;

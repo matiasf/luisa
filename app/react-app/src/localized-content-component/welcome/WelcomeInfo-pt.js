@@ -1,4 +1,4 @@
-function WelcomeInfoEn() {
+function WelcomeInfoPr() {
 
     return (
         <div className="container text-start">
@@ -83,7 +83,8 @@ function WelcomeInfoEn() {
                 <i><a className="text-dark" href="mailto:cruzar@fic.edu.uy?subject=Luisa: ">
                     contacto
                 </a>{' / '}
-                    <a className="text-dark" href="https://www.instagram.com/proyecto.luisa/?hl=es-la" target="_blank" rel="noreferrer">
+                    <a className="text-dark" href="https://www.instagram.com/proyecto.luisa/?hl=es-la" target="_blank"
+                       rel="noreferrer">
                         instagram
                     </a></i>
             </p>
@@ -97,4 +98,4 @@ function WelcomeInfoEn() {
 
 }
 
-export default WelcomeInfoEn;
+export default WelcomeInfoPr;

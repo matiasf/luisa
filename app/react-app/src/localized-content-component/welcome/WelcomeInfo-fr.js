@@ -1,15 +1,14 @@
-function WelcomeInfoEn() {
+function WelcomeInfoFr() {
 
     return (
         <div className="container text-start">
             <h1 className="text-center alternate-font"><strong>LUISA</strong></h1>
 
-            <p className="lead">La aplicación LUISA en homenaje a <u><a className="text-dark"
-                                                                        href="https://es.wikipedia.org/wiki/Luisa_Cuesta">Luisa
-                Cuesta</a></u>, es un esfuerzo colectivo para transcribir textos del período dictatorial y
-                pre dictatorial uruguayo que por diversas razones es difícil
-                transcribir de manera automática. El proyecto busca verdad y justicia sobre los actos de terrorismo de
-                Estado.
+            <p className="lead">L'application LUISA est un hommage à <u><a className="text-dark"
+                                                                           href="https://es.wikipedia.org/wiki/Luisa_Cuesta">Luisa
+                Cuesta</a></u>, Il s'agit d'un effort collectif pour transcrire des textes de la période dictatoriale et
+                prédictatoriale uruguayenne qui, pour diverses raisons, est difficile à transcrire automatiquement. Le projet
+                cherche la vérité et la justice sur les actes de terrorisme d'État.
             </p>
             <div className="row">
                 <div className="col-lg-3">
@@ -24,10 +23,10 @@ function WelcomeInfoEn() {
 
                     </svg>
 
-                    <h4 className="text-center">Recuperación de Archivos </h4>
-                    <p className="lead"> Se recuperaron archivos de varias fuentes donde se almacena información sobre
-                        la dictadura uruguaya incluyendo
-                        procedimientos represivos, fichas policiales, informes, etc.</p>
+                    <h4 className="text-center">Récupération des fichiers</h4>
+                    <p className="lead">Des fichiers ont été récupérés à partir de diverses sources où ils sont stockées des
+                        informations sur la dictature uruguayenne, notamment des procédures répressives, des dossiers de police,
+                        des rapports, etc.</p>
                 </div>
                 <div className="col-lg-3">
                     <svg viewBox="0 0 50 50" width="100%" height="130"
@@ -41,10 +40,9 @@ function WelcomeInfoEn() {
 
                     </svg>
 
-                    <h4 className="text-center">Transcripción de Imágenes</h4>
-                    <p className="lead">Pedimos que nos ayude transcribiendo fotos de documentos, de la cual le
-                        ofrecemos una porción que
-                        contiene texto, símbolos o números.
+                    <h4 className="text-center">Transcription d'images</h4>
+                    <p className="lead">Nous vous demandons de nous aider a transcrire des photos de documents. Ces photos
+                        contiennent des textes, des symboles ou des chiffres.
                     </p>
                 </div>
                 <div className="col-lg-3">
@@ -59,10 +57,9 @@ function WelcomeInfoEn() {
                         </svg>
 
                     </svg>
-                    <h4 className="text-center">Aplicación de Técnicas de Cruzamiento</h4>
-                    <p className="lead">Se utilizan
-                        técnicas de cruzamiento de información para procesar de manera automática y eficiente los
-                        contenidos de los documentos digitalizados.
+                    <h4 className="text-center">Application des techniques de fusión/croisement</h4>
+                    <p className="lead">Les techniques de croisement d'informations sont utilisées pour traiter automatiquement et
+                        efficacement le contenu des documents numérisés.
                     </p>
                 </div>
                 <div className="col-lg-3">
@@ -77,22 +74,23 @@ function WelcomeInfoEn() {
 
                     </svg>
 
-                    <h4 className="text-center">Análisis</h4>
-                    <p className="lead">Los documentos se categorizan y analizan para el mejor entendimiento del funcionamiento
-                        de la dictadura.</p>
+                    <h4 className="text-center">Analyse</h4>
+                    <p className="lead">Les documents sont catégorisés et analysés pour une meilleure compréhension du
+                        fonctionnement de la dictature.</p>
                 </div>
             </div>
             <p className="alternate-font text-center">
                 <i><a className="text-dark" href="mailto:cruzar@fic.edu.uy?subject=Luisa: ">
-                    contacto
+                    contact
                 </a>{' / '}
-                    <a className="text-dark" href="https://www.instagram.com/proyecto.luisa/?hl=es-la" target="_blank" rel="noreferrer">
+                    <a className="text-dark" href="https://www.instagram.com/proyecto.luisa/?hl=es-la" target="_blank"
+                       rel="noreferrer">
                         instagram
                     </a></i>
             </p>
 
             <div className="text-center">
-                <a className="btn btn-dark js-scroll-trigger" href="#images">¡A las imágenes!</a>
+                <a className="btn btn-dark js-scroll-trigger" href="#images">Aux images!</a>
             </div>
         </div>
 
@@ -100,4 +98,4 @@ function WelcomeInfoEn() {
 
 }
 
-export default WelcomeInfoEn;
+export default WelcomeInfoFr;

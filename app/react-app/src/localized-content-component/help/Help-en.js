@@ -4,7 +4,8 @@ function HelpEn() {
         <div className="container">
             <h2>Instructions for Transcribing the Images</h2>
             <p className="lead">
-                Type the content of each image in the box using your best judgement and the context provided by the image showing the complete text.
+                Type the content of each image in the box using your best judgement and the context provided by the image showing
+                the complete text.
 
             </p>
             <div className="row">
@@ -44,7 +45,8 @@ function HelpEn() {
                         Save and store complete work by clicking the "Send Data" button or using the "Enter" key.
                     </li>
                     <li>
-                        If there is more than one line in the text block, use "Shift" and "Enter" simultaneously to separate the lines.
+                        If there is more than one line in the text block, use "Shift" and "Enter" simultaneously to separate the
+                        lines.
                     </li>
                     <li>
                         If the image is too large, use the horizontal scroll bar to view the full image.

@@ -1,4 +1,4 @@
-function AboutUs() {
+function AboutUsEn() {
 
     return (
         <div className="container">
@@ -142,4 +142,4 @@ function AboutUs() {
 
 }
 
-export default AboutUs;
+export default AboutUsEn;

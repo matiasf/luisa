@@ -1,27 +1,24 @@
-function AboutUs() {
+function AboutUsFr() {
 
     return (
         <div className="container">
-            <h2>How we are</h2>
+            <h2>Qui sommes nous</h2>
 
-            <p className="lead"> Abocamos docentes-investigadores y estudiantes de la <u><a
+            <p className="lead">Nous sommes enseignants-chercheurs et étudiants de la <u><a
                 className="text-white"
-                href="http://www.fiC.edu.uy">Facultad
-                de Información y Comunicación (FIC) </a></u>y de la <u><a className="text-white"
-                                                                          href="http://www.fing.edu.uy">Facultad de
-                Ingeniería (FIng)</a></u>, así como miembros de <u><a className="text-white" href="https://desaparecidos.org.uy/">Madres
-                y Familiares de Uruguayos Detenidos-Desaparecidos</a></u>.
-                Dichos grupos, a traves del desarrollo de estrategias y herramientas de procesiamiento de datos, buscamos divulgar
-                la informacion recabada.</p>
-            <p className="lead">En el marco del llamado 2017 a Proyectos de Extensión que emitió
-                la <u><a className="text-white"
-                         href="http://www.extension.udelar.edu.uy/">Comisión
-                    Sectorial de Extensión y Actividades con el Medio (CSEAM) </a></u>de la <u><a className="text-white"
-                                                                                                  href="http://www.universidad.edu.uy">Universidad
-                    de la República (UdelaR), </a></u>comenzó a funcionar este proyecto de sistematización,
-                tratamiento y difusión de la
-                información contenida en los documentos recuperados.</p>
-
+                href="http://www.fiC.edu.uy">Faculté d’Information et de Communication (FIC)</a></u>et de la <u><a
+                className="text-white"
+                href="http://www.fing.edu.uy">Faculté d'Ingénierie (FIng)</a></u>, ainsi que des <u><a className="text-white"
+                                                                                                       href="https://desaparecidos.org.uy/">Mères
+                et des membres de Familles de Détenus-Disparus uruguayens</a></u>.
+                Ces groupes collaborent pour collecter et traiter les documents afin de rendre les informations collectées
+                accessibles au public.</p>
+            <p className="lead">En 2017, la <u><a className="text-white"
+                                                  href="http://www.extension.udelar.edu.uy/">Commission sectorielle de
+                vulgarisation et activités dans les médias (CSEAM) </a></u>de <u><a className="text-white"
+                                                                                    href="http://www.universidad.edu.uy">l'Université
+                de la République (UdelaR), </a></u>a proposé un projet d'extension pour collecter, traiter et diffuser les
+                informations contenues dans les documents récupérés.</p>
             <br/>
             <br/>
 
@@ -33,7 +30,7 @@ function AboutUs() {
                             <button className="btn btn-link text-dark collapsed"
                                     data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false"
                                     aria-controls="collapseOne">
-                                Facultad de Información y Comunicación (FIC)
+                                Faculté de l'Information et de la Communication (FIC)
                             </button>
                         </h5>
 
@@ -41,14 +38,14 @@ function AboutUs() {
                     <div id="collapseOne" className="collapse show rgba-black-light white-text lead" aria-labelledby="headingOne"
                          data-parent="#accordion">
                         <div className="card-body parallax">
-                            <b>Sección Periodismo:</b>
+                            <b>Section Journalisme:</b>
                             <ul>
-                                <li>Profesor Adjunto Samuel Blixen</li>
-                                <li>Asistente Betania Núñez</li>
+                                <li>Professeur adjoint Samuel Blixen</li>
+                                <li>Assistante Betania Núñez</li>
                             </ul>
-                            <b>Departamento de Fuentes Documentales, Recursos y Servicios:</b>
+                            <b>Département des sources documentaires, ressources et services documentaires:</b>
                             <ul>
-                                <li>Profesor Adjunto Fabián Hernández Muñiz</li>
+                                <li>Professeur adjoint Fabián Hernández Muñiz</li>
                             </ul>
                         </div>
                     </div>
@@ -59,7 +56,7 @@ function AboutUs() {
                             <button className="btn btn-link  text-dark collapsed"
                                     data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
                                     aria-controls="collapseTwo">
-                                Facultad de Ingeniería (FIng)
+                                Faculté d'ingénierie (FIng)
                             </button>
                         </h5>
                     </div>
@@ -84,7 +81,7 @@ function AboutUs() {
                         <h5 className="mb-0">
                             <button className="btn btn-link  text-dark collapsed" data-bs-toggle="collapse"
                                     data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                Organizaciones Vinculadas
+                                Organisations liées
                             </button>
                         </h5>
                     </div>
@@ -114,7 +111,7 @@ function AboutUs() {
                         <h5 className="mb-0">
                             <button className="btn btn-link  text-dark collapsed" data-bs-toggle="collapse"
                                     data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                Recursos de Apoyo
+                                Ressources d'assistance
                             </button>
                         </h5>
                     </div>
@@ -143,4 +140,4 @@ function AboutUs() {
 
 }
 
-export default AboutUs;
+export default AboutUsFr;

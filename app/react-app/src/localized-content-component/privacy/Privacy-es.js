@@ -1,4 +1,4 @@
-function Privacy() {
+function PrivacyEs() {
 
     return (
         <div className="container">
@@ -20,4 +20,4 @@ function Privacy() {
 
 }
 
-export default Privacy;
+export default PrivacyEs;

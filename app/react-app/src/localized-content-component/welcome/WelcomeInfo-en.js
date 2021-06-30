@@ -86,7 +86,8 @@ function WelcomeInfoEn() {
                 <i><a className="text-dark" href="mailto:cruzar@fic.edu.uy?subject=Luisa: ">
                     contact
                 </a>{' / '}
-                    <a className="text-dark" href="https://www.instagram.com/proyecto.luisa/?hl=es-la" target="_blank" rel="noreferrer">
+                    <a className="text-dark" href="https://www.instagram.com/proyecto.luisa/?hl=es-la" target="_blank"
+                       rel="noreferrer">
                         instagram
                     </a></i>
             </p>
